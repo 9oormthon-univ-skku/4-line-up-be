@@ -1,0 +1,38 @@
+package com.lineup.skku.marker.entity
+
+import com.lineup.skku.area.Area
+import com.lineup.skku.common.Hour
+import com.lineup.skku.common.Link
+import com.lineup.skku.common.Point
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.EnumType
+import jakarta.persistence.Enumerated
+
+@Entity
+class Gate (
+    id: Long?,
+    area: Area?,
+    category: Category,
+    name: String,
+    summary: String?,
+    description: String,
+    point: Point,
+    @Column
+    @Enumerated(EnumType.STRING)
+    val type: GateType,
+    hour: Hour,
+    images: MutableList<String> = mutableListOf(),
+    links: MutableList<Link> = mutableListOf(),
+) : Marker(
+    id,
+    area,
+    category,
+    name,
+    summary,
+    description,
+    point,
+    hour,
+    images,
+    links
+)

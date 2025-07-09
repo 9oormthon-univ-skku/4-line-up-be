@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: skku
+
+  profiles:
+    default: local
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+
+  web:
+    resources:
+      add-mappings: false
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

@@ -1,5 +1,5 @@
 package com.lineup.skku.common
 
-data class ExceptionWithCode(
+data class CodeException(
     val code: ExceptionCode
 ) : RuntimeException()
