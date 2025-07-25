@@ -16,7 +16,7 @@ class Post (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "post_id")
-    val id: Long?,
+    val id: Long = 0L,
 
     @Column(nullable = false)
     var title: String,
@@ -25,13 +25,13 @@ class Post (
     var content: String,
 
     @ElementCollection
-    @JoinTable(name = "marker_image",
-        joinColumns = [JoinColumn(name = "marker_id")])
+    @JoinTable(name = "post_image",
+        joinColumns = [JoinColumn(name = "post_id")])
     @Column(name = "src")
     val images: MutableList<String> = mutableListOf(),
 
     @ElementCollection
-    @JoinTable(name = "marker_link",
-        joinColumns = [JoinColumn(name = "marker_id")])
+    @JoinTable(name = "post_link",
+        joinColumns = [JoinColumn(name = "post_id")])
     val links: MutableList<Link> = mutableListOf()
 ) : BaseEntity()

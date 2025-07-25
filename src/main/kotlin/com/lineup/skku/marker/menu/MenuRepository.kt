@@ -1,9 +1,13 @@
-package com.lineup.skku.marker
+package com.lineup.skku.marker.menu
 
-import com.lineup.skku.marker.entity.Menu
+import com.lineup.skku.common.CodeException
+import com.lineup.skku.marker.marker.MarkerExceptionCode
 import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
+
+fun MenuRepository.findByIdOrThrow(id: Long) = findByIdOrNull(id) ?: throw CodeException(MarkerExceptionCode.MENU_NOT_FOUND)
 
 @Repository
 @Transactional(readOnly = true)

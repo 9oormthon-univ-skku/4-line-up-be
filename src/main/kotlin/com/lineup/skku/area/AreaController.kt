@@ -32,7 +32,6 @@ class AreaController (
         return ResponseEntity.ok(result)
     }
 
-
     @PatchMapping("/{id}")
     fun update(
         @PathVariable id: Long,

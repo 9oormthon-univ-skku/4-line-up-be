@@ -1,15 +1,16 @@
-package com.lineup.skku.marker.entity
+package com.lineup.skku.marker.marker.entity
 
 import com.lineup.skku.area.Area
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
 import com.lineup.skku.common.Point
+import com.lineup.skku.marker.category.Category
 import jakarta.persistence.*
 import java.time.LocalTime
 
 @Entity
 class Stop (
-    id: Long?,
+    id: Long,
     area: Area?,
     category: Category,
     name: String,
@@ -24,15 +25,4 @@ class Stop (
         joinColumns = [JoinColumn(name = "stop_id")])
     @Column(name = "time")
     private val times: MutableList<LocalTime> = mutableListOf()
-) : Marker(
-    id,
-    area,
-    category,
-    name,
-    summary,
-    description,
-    point,
-    hour,
-    images,
-    links
-)
+) : Marker(id, area, category, name, summary, description, point, hour, images, links)

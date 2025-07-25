@@ -1,10 +1,11 @@
-package com.lineup.skku.marker.entity
+package com.lineup.skku.marker.marker.entity
 
 import com.lineup.skku.area.Area
 import com.lineup.skku.common.BaseEntity
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
 import com.lineup.skku.common.Point
+import com.lineup.skku.marker.category.Category
 import jakarta.persistence.*
 
 @Entity
@@ -13,11 +14,11 @@ class Marker (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "marker_id")
-    val id: Long?,
+    val id: Long = 0L,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "area_id")
-    val area: Area?,
+    var area: Area?,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", nullable = false)

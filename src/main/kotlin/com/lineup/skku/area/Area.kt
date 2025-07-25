@@ -11,7 +11,7 @@ class Area (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "area_id")
-    val id: Long?,
+    val id: Long = 0L,
 
     @Column(nullable = false)
     var name: String,
