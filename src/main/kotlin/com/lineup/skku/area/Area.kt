@@ -8,11 +8,7 @@ import jakarta.persistence.*
 
 @Entity
 class Area (
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "area_id")
-    val id: Long = 0L,
+    id: Long = 0L,
 
     @Column(nullable = false)
     var name: String,
@@ -42,7 +38,7 @@ class Area (
         joinColumns = [JoinColumn(name = "area_id")])
     val links: MutableList<Link> = mutableListOf()
 
-) : BaseEntity() {
+) : BaseEntity(id) {
 
     fun update(dto: AreaUpdateDto) {
         name = dto.name ?: name

@@ -25,11 +25,7 @@ import jakarta.persistence.*
     JsonSubTypes.Type(value = Store::class, name = "store")
 ])
 class Marker (
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "marker_id")
-    val id: Long = 0L,
+    id: Long = 0L,
 
     @ManyToOne
     @JoinColumn(name = "area_id")
@@ -65,7 +61,7 @@ class Marker (
         joinColumns = [JoinColumn(name = "marker_id")])
     val links: MutableList<Link> = mutableListOf()
 
-) : BaseEntity() {
+) : BaseEntity(id) {
 
     fun update(dto: MarkerUpdateDto) {
         name = dto.name ?: name
