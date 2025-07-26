@@ -10,13 +10,11 @@ import org.springframework.transaction.annotation.Transactional
 @Transactional
 class MarkerService (
     private val repository : MarkerRepository,
+    private val converter : MarkerConverter,
 ){
-    private final val mapper = MarkerMapper.INSTANCE
 
     fun create(dto: MarkerCreateDto, area: Area?, category: Category): Marker {
-        val new = mapper.toEntity(dto)
-        new.area = area
-        new.category = category
+        val new = converter.toEntity(area, category, dto)
         return repository.save(new)
     }
 
@@ -32,7 +30,7 @@ class MarkerService (
 
     fun update(id: Long, dto: MarkerUpdateDto) {
         val found = repository.findByIdOrThrow(id)
-        mapper.update(dto, found)
+        found.update(dto)
         repository.save(found)
     }
 

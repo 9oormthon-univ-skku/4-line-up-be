@@ -3,8 +3,12 @@ package com.lineup.skku.marker.marker.entity
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.lineup.skku.area.Area
-import com.lineup.skku.common.*
+import com.lineup.skku.common.BaseEntity
+import com.lineup.skku.common.Hour
+import com.lineup.skku.common.Link
+import com.lineup.skku.common.Point
 import com.lineup.skku.marker.category.Category
+import com.lineup.skku.marker.marker.MarkerUpdateDto
 import jakarta.persistence.*
 
 @Entity
@@ -20,7 +24,8 @@ import jakarta.persistence.*
     JsonSubTypes.Type(value = Stop::class, name = "stop"),
     JsonSubTypes.Type(value = Store::class, name = "store")
 ])
-class Marker @Default constructor (
+class Marker (
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "marker_id")
@@ -59,4 +64,23 @@ class Marker @Default constructor (
     @JoinTable(name = "marker_link",
         joinColumns = [JoinColumn(name = "marker_id")])
     val links: MutableList<Link> = mutableListOf()
-) : BaseEntity()
+
+) : BaseEntity() {
+
+    fun update(dto: MarkerUpdateDto) {
+        name = dto.name ?: name
+        summary = dto.summary ?: summary
+        description = dto.description ?: description
+        point = dto.point ?: point
+        hour = dto.hour ?: hour
+        if (dto.images != null) {
+            images.clear()
+            images.addAll(dto.images!!)
+        }
+        if (dto.links != null) {
+            links.clear()
+            links.addAll(dto.links!!)
+        }
+    }
+
+}

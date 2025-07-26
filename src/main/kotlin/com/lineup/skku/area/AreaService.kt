@@ -6,12 +6,12 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 @Transactional
 class AreaService (
-    private val repository: AreaRepository
+    private val repository: AreaRepository,
+    private val converter: AreaConverter
 ) {
-    private final val mapper = AreaMapper.INSTANCE
-
-    fun create(area: Area): Area {
-        return repository.save(area)
+    fun create(dto: AreaCreateDto): Area {
+        val new = converter.toEntity(dto)
+        return repository.save(new)
     }
 
     @Transactional(readOnly = true)
@@ -26,7 +26,7 @@ class AreaService (
 
     fun update(id: Long, dto: AreaUpdateDto) {
         val found = repository.findByIdOrThrow(id)
-        mapper.update(dto, found)
+        found.update(dto)
         repository.save(found)
     }
 

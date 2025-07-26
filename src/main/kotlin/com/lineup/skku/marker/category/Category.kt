@@ -1,6 +1,5 @@
 package com.lineup.skku.marker.category
 
-import com.lineup.skku.common.Default
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -8,7 +7,7 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-class Category @Default constructor (
+class Category (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
@@ -22,4 +21,10 @@ class Category @Default constructor (
 
     @Column(nullable = false)
     var color: String,
-)
+) {
+    fun update(dto: CategoryUpdateDto) {
+        name = dto.name ?: name
+        icon = dto.icon ?: icon
+        color = dto.color ?: color
+    }
+}

@@ -12,21 +12,19 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/categories")
 @RestController
 class CategoryController (
-    private val categoryService: CategoryService
+    private val service: CategoryService,
 ) {
-    private val categoryMapper = CategoryMapper.Companion.INSTANCE
 
     @PostMapping
     fun create(@Valid @RequestBody dto: CategoryCreateDto): ResponseEntity<Long> {
-        val new = categoryMapper.toEntity(dto)
-        val saved = categoryService.create(new)
+        val saved = service.create(dto)
         return ResponseEntity.created("/categories/${saved.id}".toUri())
             .body(saved.id)
     }
 
     @GetMapping
     fun findAll(): ResponseEntity<List<Category>> {
-        val result = categoryService.findAll()
+        val result = service.findAll()
         return ResponseEntity.ok(result)
     }
 
@@ -35,13 +33,13 @@ class CategoryController (
         @PathVariable id: Long,
         @RequestBody dto: CategoryUpdateDto
     ): ResponseEntity<Void> {
-        categoryService.update(id, dto)
+        service.update(id, dto)
         return ResponseEntity.ok().build()
     }
 
     @DeleteMapping("/{id}")
     fun delete(@PathVariable id: Long): ResponseEntity<Void> {
-        categoryService.delete(id)
+        service.delete(id)
         return ResponseEntity.ok().build()
     }
 }

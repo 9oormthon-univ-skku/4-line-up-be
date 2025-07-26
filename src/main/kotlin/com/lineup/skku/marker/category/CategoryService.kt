@@ -1,16 +1,14 @@
 package com.lineup.skku.marker.category
 
-import com.lineup.skku.category.category.CategoryMapper
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service
 @Transactional
 class CategoryService (
-    private val repository : CategoryRepository
+    private val repository : CategoryRepository,
+    private val converter: CategoryConverter
 ){
-    private val mapper = CategoryMapper.INSTANCE
-
     @Transactional(readOnly = true)
     fun findAll(): List<Category> {
         return repository.findAll()
@@ -21,14 +19,14 @@ class CategoryService (
         return repository.findByIdOrThrow(id)
     }
 
-    fun create(category: Category): Category {
-        repository.save(category)
-        return category
+    fun create(dto: CategoryCreateDto): Category {
+        val new = converter.toEntity(dto)
+        return repository.save(new)
     }
 
     fun update(id: Long, dto: CategoryUpdateDto) {
         val found = repository.findByIdOrThrow(id)
-        mapper.update(dto, found)
+        found.update(dto)
         repository.save(found)
     }
 

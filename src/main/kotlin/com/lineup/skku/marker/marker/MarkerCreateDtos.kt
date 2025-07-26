@@ -30,19 +30,19 @@ open class MarkerCreateDto(
 
     @field:NotBlank(message = "이름을 입력해주세요.")
     @field:Size(min = 1, max = 31, message = "이름은 최소 1글자, 최대 31글자 입니다.")
-    open var name: String,
+    open val name: String,
 
     @field:Size(min = 1, max = 31, message = "요약은 최소 1글자, 최대 31글자 입니다.")
-    open var summary: String?,
+    open val summary: String?,
 
     @field:NotBlank(message = "설명을 입력해주세요.")
-    open var description: String,
+    open val description: String,
 
     @field:NotNull(message = "위치 정보를 입력해주세요.")
-    open var point: Point,
+    open val point: Point,
 
     @field:NotNull(message = "운영 시간을 입력해주세요.")
-    open var hour: Hour,
+    open val hour: Hour,
 
     @field:NotNull(message = "이미지 배열을 입력해주세요.")
     @field:Size(min = 1, message = "최소 하나 이상의 이미지를 포함해주세요.")
@@ -54,11 +54,11 @@ open class MarkerCreateDto(
 data class GateCreateDto(
     override val areaId: Long?,
     override val categoryId: Long,
-    override var name: String,
-    override var summary: String?,
-    override var description: String,
-    override var point: Point,
-    override var hour: Hour,
+    override val name: String,
+    override val summary: String?,
+    override val description: String,
+    override val point: Point,
+    override val hour: Hour,
     override val images: List<String> = emptyList(),
     override val links: List<Link> = emptyList(),
     @field:NotNull(message = "게이트 유형을 입력해주세요.")
@@ -68,11 +68,11 @@ data class GateCreateDto(
 data class StopCreateDto(
     override val areaId: Long?,
     override val categoryId: Long,
-    override var name: String,
-    override var summary: String?,
-    override var description: String,
-    override var point: Point,
-    override var hour: Hour,
+    override val name: String,
+    override val summary: String?,
+    override val description: String,
+    override val point: Point,
+    override val hour: Hour,
     override val images: List<String> = emptyList(),
     override val links: List<Link> = emptyList(),
     @field:NotNull(message = "배차 시간표를 입력해주세요.")
@@ -83,11 +83,11 @@ data class StopCreateDto(
 data class StoreCreateDto(
     override val areaId: Long?,
     override val categoryId: Long,
-    override var name: String,
-    override var summary: String?,
-    override var description: String,
-    override var point: Point,
-    override var hour: Hour,
+    override val name: String,
+    override val summary: String?,
+    override val description: String,
+    override val point: Point,
+    override val hour: Hour,
     override val images: List<String> = emptyList(),
     override val links: List<Link> = emptyList()
 ) : MarkerCreateDto(areaId, categoryId, name, summary, description, point, hour, images, links)

@@ -18,7 +18,7 @@ class MarkerController (
     @PostMapping
     fun create(@Valid @RequestBody dto: MarkerCreateDto): ResponseEntity<Long> {
         val foundCategory = categoryService.findById(dto.categoryId)
-        val foundArea = if(dto.areaId == null) null else areaService.findById(dto.areaId!!)
+        val foundArea = if (dto.areaId == null) null else areaService.findById(dto.areaId!!)
         val savedMarker = markerService.create(dto, foundArea, foundCategory)
         return ResponseEntity.created("/markers/${savedMarker.id}".toUri())
             .body(savedMarker.id)

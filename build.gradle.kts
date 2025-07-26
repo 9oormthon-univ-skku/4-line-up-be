@@ -4,7 +4,6 @@ plugins {
 	id("org.springframework.boot") version "3.5.0"
 	id("io.spring.dependency-management") version "1.1.7"
 	kotlin("plugin.jpa") version "1.9.25"
-	kotlin("kapt") version "1.9.25"
 }
 
 group = "com.lineup"
@@ -37,16 +36,6 @@ dependencies {
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	implementation("io.github.oshai:kotlin-logging-jvm:7.0.7")
-	implementation("org.mapstruct:mapstruct:1.6.3")
-	kapt("org.mapstruct:mapstruct-processor:1.6.3")
-}
-
-kapt {
-	arguments {
-		arg("mapstruct.nullValuePropertyMappingStrategy", "IGNORE")
-		arg("mapstruct.nullValueCheckStrategy", "ALWAYS")
-		arg("mapstruct.unmappedTargetPolicy", "IGNORE")
-	}
 }
 
 kotlin {
