@@ -27,6 +27,7 @@ class AreaService (
     fun update(id: Long, dto: AreaUpdateDto) {
         val found = repository.findByIdOrThrow(id)
         mapper.update(dto, found)
+        repository.save(found)
     }
 
     fun delete(id: Long) {

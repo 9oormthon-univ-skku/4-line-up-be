@@ -1,5 +1,6 @@
 package com.lineup.skku.category.category
 
+import com.lineup.skku.common.MapperConfig
 import com.lineup.skku.marker.category.Category
 import com.lineup.skku.marker.category.CategoryCreateDto
 import com.lineup.skku.marker.category.CategoryUpdateDto
@@ -9,7 +10,11 @@ import org.mapstruct.MappingTarget
 import org.mapstruct.factory.Mappers
 import java.time.LocalDateTime
 
-@Mapper(imports = [LocalDateTime::class])
+
+@Mapper(
+    config = MapperConfig::class,
+    imports = [LocalDateTime::class]
+)
 interface CategoryMapper {
     @Mapping(target = "id", ignore = true)
     fun toEntity(dto: CategoryCreateDto): Category

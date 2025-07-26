@@ -11,7 +11,7 @@ import jakarta.persistence.Entity
 class Store (
     id: Long,
     area: Area?,
-    category: Category,
+    category: Category?,
     name: String,
     summary: String?,
     description: String,

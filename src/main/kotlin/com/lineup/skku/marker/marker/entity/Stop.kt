@@ -12,7 +12,7 @@ import java.time.LocalTime
 class Stop (
     id: Long,
     area: Area?,
-    category: Category,
+    category: Category?,
     name: String,
     summary: String?,
     description: String,
@@ -20,7 +20,7 @@ class Stop (
     hour: Hour,
     images: MutableList<String> = mutableListOf(),
     links: MutableList<Link> = mutableListOf(),
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "stop_time",
         joinColumns = [JoinColumn(name = "stop_id")])
     @Column(name = "time")

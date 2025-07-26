@@ -1,13 +1,14 @@
 package com.lineup.skku.area
 
 import com.lineup.skku.common.BaseEntity
+import com.lineup.skku.common.Default
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
 import com.lineup.skku.common.Point
 import jakarta.persistence.*
 
 @Entity
-class Area (
+class Area @Default constructor (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "area_id")

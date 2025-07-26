@@ -16,6 +16,11 @@ class CategoryService (
         return repository.findAll()
     }
 
+    @Transactional(readOnly = true)
+    fun findById(id: Long): Category {
+        return repository.findByIdOrThrow(id)
+    }
+
     fun create(category: Category): Category {
         repository.save(category)
         return category
@@ -24,6 +29,7 @@ class CategoryService (
     fun update(id: Long, dto: CategoryUpdateDto) {
         val found = repository.findByIdOrThrow(id)
         mapper.update(dto, found)
+        repository.save(found)
     }
 
     fun delete(id: Long) {
