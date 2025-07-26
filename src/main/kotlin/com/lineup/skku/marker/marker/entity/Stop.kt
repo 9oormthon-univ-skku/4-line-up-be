@@ -13,7 +13,7 @@ import java.time.LocalTime
 class Stop (
     id: Long,
     area: Area?,
-    category: Category?,
+    category: Category,
     name: String,
     summary: String?,
     description: String,

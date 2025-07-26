@@ -15,7 +15,7 @@ import jakarta.persistence.Enumerated
 class Gate (
     id: Long,
     area: Area?,
-    category: Category?,
+    category: Category,
     name: String,
     summary: String?,
     description: String,

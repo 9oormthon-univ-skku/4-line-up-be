@@ -38,7 +38,7 @@ class MarkerService (
         repository.deleteByIdOrThrow(id)
     }
 
-    fun updateCategory(marker: Marker, category: Category?) {
+    fun updateCategory(marker: Marker, category: Category) {
         marker.category = category
         repository.save(marker)
     }

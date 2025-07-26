@@ -33,7 +33,7 @@ class Marker (
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    var category: Category?,
+    var category: Category,
 
     @Column(nullable = false)
     var name: String,
