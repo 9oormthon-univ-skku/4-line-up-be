@@ -38,4 +38,5 @@ class Post (
             links.addAll(dto.links)
         }
     }
+
 }

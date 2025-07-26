@@ -6,17 +6,17 @@ import jakarta.persistence.Entity
 import java.time.LocalDateTime
 
 @Entity
-class Time (
+class Timeslot (
     id: Long = 0L,
 
     @Column(nullable = false)
     var name: String,
 
     @Column(nullable = false)
-    var start: LocalDateTime,
+    var startTime: LocalDateTime,
 
     @Column(nullable = false)
-    var end: LocalDateTime,
+    var endTime: LocalDateTime,
 
     var href: String?
 
