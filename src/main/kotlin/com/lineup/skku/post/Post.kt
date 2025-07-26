@@ -24,4 +24,18 @@ class Post (
     @JoinTable(name = "post_link",
         joinColumns = [JoinColumn(name = "post_id")])
     val links: MutableList<Link> = mutableListOf()
-) : BaseEntity(id)
+) : BaseEntity(id) {
+
+    fun update(dto: PostUpdateDto) {
+        title = dto.title ?: title
+        content = dto.content ?: content
+        if (dto.images != null) {
+            images.clear()
+            images.addAll(dto.images)
+        }
+        if (dto.links != null) {
+            links.clear()
+            links.addAll(dto.links)
+        }
+    }
+}

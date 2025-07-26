@@ -7,6 +7,10 @@ import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
 fun PostRepository.findByIdOrThrow(id: Long) = findByIdOrNull(id) ?: throw CodeException(PostExceptionCode.NOT_FOUND)
+fun PostRepository.deleteByIdOrThrow(id: Long) = {
+    findByIdOrThrow(id)
+    deleteById(id)
+}
 
 @Repository
 @Transactional(readOnly = true)
