@@ -25,10 +25,6 @@ data class AreaCreateDto(
     @field:Size(min = 1, message = "최소 하나 이상의 이미지를 포함해주세요.")
     val images: List<String> = emptyList(),
 
-    @field:NotNull(message = "위치 정보 배열을 입력해주세요.")
-    @field:Size(min = 3, message = "최소 셋 이상의 위치 정보를 포함해주세요.")
-    val points: Set<Point> = emptySet(),
-
     val links: List<Link>
 )
 
@@ -45,9 +41,6 @@ data class AreaUpdateDto(
 
     @field:Size(min = 1, message = "최소 하나 이상의 이미지를 포함해주세요.")
     val images: List<String>?,
-
-    @field:Size(min = 3, message = "최소 셋 이상의 위치 정보를 포함해주세요.")
-    val points: Set<Point>?,
 
     val links: List<Link>?
 )

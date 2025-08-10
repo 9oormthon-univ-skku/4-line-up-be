@@ -13,7 +13,6 @@ class AreaConverter {
             dto.description,
             dto.hour,
             dto.images.toMutableList(),
-            dto.points.toMutableSet(),
             dto.links.toMutableList(),
         )
     }

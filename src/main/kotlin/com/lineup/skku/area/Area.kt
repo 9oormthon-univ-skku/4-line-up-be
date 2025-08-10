@@ -29,11 +29,6 @@ class Area (
     val images: MutableList<String> = mutableListOf(),
 
     @ElementCollection(fetch = FetchType.EAGER)
-    @JoinTable(name = "area_point",
-        joinColumns = [JoinColumn(name = "area_id")])
-    val points: MutableSet<Point> = mutableSetOf(),
-
-    @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "area_link",
         joinColumns = [JoinColumn(name = "area_id")])
     val links: MutableList<Link> = mutableListOf()
@@ -48,10 +43,6 @@ class Area (
         if (dto.images != null) {
             images.clear()
             images.addAll(dto.images)
-        }
-        if (dto.points != null) {
-            points.clear()
-            points.addAll(dto.points)
         }
         if (dto.links != null) {
             links.clear()
