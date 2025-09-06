@@ -2,7 +2,6 @@ package com.lineup.skku.area
 
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
-import com.lineup.skku.common.Point
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Size

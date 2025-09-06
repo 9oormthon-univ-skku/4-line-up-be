@@ -1,6 +1,6 @@
-package com.lineup.skku.marker.menu
+package com.lineup.skku.booth.menu
 
-import com.lineup.skku.marker.marker.entity.Store
+import com.lineup.skku.booth.booth.entity.Store
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 

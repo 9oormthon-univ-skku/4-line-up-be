@@ -1,22 +1,22 @@
-package com.lineup.skku.marker.marker
+package com.lineup.skku.booth.booth
 
 import com.lineup.skku.area.Area
-import com.lineup.skku.marker.category.Category
-import com.lineup.skku.marker.marker.entity.Gate
-import com.lineup.skku.marker.marker.entity.Marker
-import com.lineup.skku.marker.marker.entity.Stop
-import com.lineup.skku.marker.marker.entity.Store
+import com.lineup.skku.booth.category.Category
+import com.lineup.skku.booth.booth.entity.Gate
+import com.lineup.skku.booth.booth.entity.Booth
+import com.lineup.skku.booth.booth.entity.Stop
+import com.lineup.skku.booth.booth.entity.Store
 import org.springframework.stereotype.Component
 
 @Component
-class MarkerConverter {
+class BoothConverter {
 
-    fun toEntity(area: Area?, category: Category, dto: MarkerCreateDto): Marker {
+    fun toEntity(area: Area?, category: Category, dto: BoothCreateDto): Booth {
         if(dto is GateCreateDto) return toEntity(area, category, dto)
         if(dto is StopCreateDto) return toEntity(area, category, dto)
         if(dto is StoreCreateDto) return toEntity(area, category, dto)
 
-        return Marker(
+        return Booth(
             0L,
             area,
             category,

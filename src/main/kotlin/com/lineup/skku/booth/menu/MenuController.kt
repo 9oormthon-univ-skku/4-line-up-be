@@ -1,10 +1,10 @@
-package com.lineup.skku.marker.menu
+package com.lineup.skku.booth.menu
 
+import com.lineup.skku.booth.booth.BoothExceptionCode
+import com.lineup.skku.booth.booth.BoothService
+import com.lineup.skku.booth.booth.entity.Store
 import com.lineup.skku.common.CodeException
 import com.lineup.skku.common.toUri
-import com.lineup.skku.marker.marker.MarkerExceptionCode
-import com.lineup.skku.marker.marker.MarkerService
-import com.lineup.skku.marker.marker.entity.Store
 import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/stores")
 @RestController
 class MenuController (
-    private val markerService: MarkerService,
+    private val boothService: BoothService,
     private val menuService: MenuService,
 ) {
     @GetMapping("/{storeId}/menus")
@@ -24,9 +24,9 @@ class MenuController (
     @PostMapping("/{storeId}/menus")
     fun createMenu(@PathVariable storeId: Long,
                    @Valid @RequestBody dto: MenuCreateDto): ResponseEntity<Long> {
-        val foundStore = markerService.findById(storeId)
+        val foundStore = boothService.findById(storeId)
         if (foundStore !is Store)
-            throw CodeException(MarkerExceptionCode.NOT_VALID)
+            throw CodeException(BoothExceptionCode.NOT_VALID)
 
         val savedMenu = menuService.add(foundStore, dto)
         return ResponseEntity.created("/stores/${storeId}/menus".toUri())

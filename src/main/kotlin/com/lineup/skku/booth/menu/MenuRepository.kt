@@ -1,16 +1,16 @@
-package com.lineup.skku.marker.menu
+package com.lineup.skku.booth.menu
 
+import com.lineup.skku.booth.booth.BoothExceptionCode
 import com.lineup.skku.common.CodeException
-import com.lineup.skku.marker.marker.MarkerExceptionCode
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 import java.util.*
 
 @Transactional(readOnly = true)
-fun MenuRepository.findByIdAndStoreIdOrThrow(id: Long, storeId: Long): Menu = findByIdAndStore_Id(id, storeId).orElseThrow({
-    throw CodeException(MarkerExceptionCode.MENU_NOT_FOUND)
-})
+fun MenuRepository.findByIdAndStoreIdOrThrow(id: Long, storeId: Long): Menu = findByIdAndStore_Id(id, storeId).orElseThrow {
+    throw CodeException(BoothExceptionCode.MENU_NOT_FOUND)
+}
 
 @Repository
 @Transactional

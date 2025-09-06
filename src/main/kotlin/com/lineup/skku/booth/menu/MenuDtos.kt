@@ -1,4 +1,4 @@
-package com.lineup.skku.marker.menu
+package com.lineup.skku.booth.menu
 
 import jakarta.validation.constraints.DecimalMax
 import jakarta.validation.constraints.NotBlank

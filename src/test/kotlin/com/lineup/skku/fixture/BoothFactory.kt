@@ -1,29 +1,26 @@
 package com.lineup.skku.fixture
 
+import com.lineup.skku.booth.booth.BoothRepository
+import com.lineup.skku.booth.booth.entity.*
+import com.lineup.skku.booth.category.Category
+import com.lineup.skku.booth.menu.Menu
+import com.lineup.skku.booth.menu.MenuRepository
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
 import com.lineup.skku.common.Point
-import com.lineup.skku.marker.category.Category
-import com.lineup.skku.marker.marker.entity.Gate
-import com.lineup.skku.marker.marker.entity.GateType
-import com.lineup.skku.marker.marker.entity.Marker
-import com.lineup.skku.marker.marker.MarkerRepository
-import com.lineup.skku.marker.menu.Menu
-import com.lineup.skku.marker.menu.MenuRepository
-import com.lineup.skku.marker.marker.entity.Stop
-import com.lineup.skku.marker.marker.entity.Store
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
+import java.time.LocalDateTime
 import java.time.LocalTime
 
 @Component
-class MarkerFactory {
+class BoothFactory {
 
-    @Autowired private lateinit var markerRepository: MarkerRepository
+    @Autowired private lateinit var boothRepository: BoothRepository
     @Autowired private lateinit var menuRepository: MenuRepository
 
-    fun create(name: String, category:Category) : Marker {
-        val marker = Marker(
+    fun create(name: String, category:Category) : Booth {
+        val booth = Booth(
             0L,
             null,
             category,
@@ -31,12 +28,12 @@ class MarkerFactory {
             "summary",
             "description",
             Point(0, 0),
-            Hour(LocalTime.MIN, LocalTime.MAX),
+            Hour(LocalDateTime.MIN, LocalDateTime.MAX),
             mutableListOf("image"),
             mutableListOf(Link("label", "href"))
         )
 
-        return markerRepository.save(marker)
+        return boothRepository.save(booth)
     }
 
     fun createGate(name: String, category:Category) : Gate {
@@ -48,13 +45,13 @@ class MarkerFactory {
             "summary",
             "description",
             Point(0, 0),
-            Hour(LocalTime.MIN, LocalTime.MAX),
+            Hour(LocalDateTime.MIN, LocalDateTime.MAX),
             mutableListOf("image"),
             mutableListOf(Link("label", "href")),
             GateType.ALL
         )
 
-        return markerRepository.save(gate)
+        return boothRepository.save(gate)
     }
 
     fun createStop(name: String, category:Category) : Stop {
@@ -66,13 +63,13 @@ class MarkerFactory {
             "summary",
             "description",
             Point(0, 0),
-            Hour(LocalTime.MIN, LocalTime.MAX),
+            Hour(LocalDateTime.MIN, LocalDateTime.MAX),
             mutableListOf("image"),
             mutableListOf(Link("label", "href")),
             mutableListOf(LocalTime.now())
         )
 
-        return markerRepository.save(stop)
+        return boothRepository.save(stop)
     }
 
     fun createStore(name: String, category:Category) : Store {
@@ -84,12 +81,12 @@ class MarkerFactory {
             "summary",
             "description",
             Point(0, 0),
-            Hour(LocalTime.MIN, LocalTime.MAX),
+            Hour(LocalDateTime.MIN, LocalDateTime.MAX),
             mutableListOf("image"),
             mutableListOf(Link("label", "href"))
         )
 
-        markerRepository.save(store)
+        boothRepository.save(store)
         val menu = Menu(0L, store, "image", "menu", 10000L)
         menuRepository.save(menu)
         return store

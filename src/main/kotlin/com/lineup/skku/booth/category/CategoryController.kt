@@ -1,10 +1,6 @@
-package com.lineup.skku.category.category
+package com.lineup.skku.booth.category
 
 import com.lineup.skku.common.toUri
-import com.lineup.skku.marker.category.Category
-import com.lineup.skku.marker.category.CategoryCreateDto
-import com.lineup.skku.marker.category.CategoryService
-import com.lineup.skku.marker.category.CategoryUpdateDto
 import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*

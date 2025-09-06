@@ -1,4 +1,4 @@
-package com.lineup.skku.marker.category
+package com.lineup.skku.booth.category
 
 import com.lineup.skku.common.BaseEntity
 import jakarta.persistence.Column

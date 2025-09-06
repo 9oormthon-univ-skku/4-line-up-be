@@ -1,7 +1,7 @@
 package com.lineup.skku.fixture
 
-import com.lineup.skku.marker.category.Category
-import com.lineup.skku.marker.category.CategoryRepository
+import com.lineup.skku.booth.category.Category
+import com.lineup.skku.booth.category.CategoryRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 

@@ -1,15 +1,18 @@
-package com.lineup.skku.marker.marker.entity
+package com.lineup.skku.booth.booth.entity
 
 import com.lineup.skku.area.Area
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
 import com.lineup.skku.common.Point
-import com.lineup.skku.marker.category.Category
-import com.lineup.skku.marker.marker.StoreUpdateDto
+import com.lineup.skku.booth.category.Category
+import com.lineup.skku.booth.booth.GateUpdateDto
+import jakarta.persistence.Column
 import jakarta.persistence.Entity
+import jakarta.persistence.EnumType
+import jakarta.persistence.Enumerated
 
 @Entity
-class Store (
+class Gate (
     id: Long,
     area: Area?,
     category: Category,
@@ -19,16 +22,20 @@ class Store (
     point: Point,
     hour: Hour,
     images: MutableList<String> = mutableListOf(),
-    links: MutableList<Link> = mutableListOf()
+    links: MutableList<Link> = mutableListOf(),
+    @Column
+    @Enumerated(EnumType.STRING)
+    var type: GateType,
 
-) : Marker(id, area, category, name, summary, description, point, hour, images, links) {
+) : Booth(id, area, category, name, summary, description, point, hour, images, links) {
 
-    fun update(dto: StoreUpdateDto) {
+    fun update(dto: GateUpdateDto) {
         name = dto.name ?: name
         summary = dto.summary ?: summary
         description = dto.description ?: description
         point = dto.point ?: point
         hour = dto.hour ?: hour
+        type = dto.type ?: type
         if (dto.images != null) {
             images.clear()
             images.addAll(dto.images)

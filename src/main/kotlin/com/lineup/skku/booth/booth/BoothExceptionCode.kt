@@ -1,9 +1,9 @@
-package com.lineup.skku.marker.marker
+package com.lineup.skku.booth.booth
 
 import com.lineup.skku.common.ExceptionCode
 import org.springframework.http.HttpStatus
 
-enum class MarkerExceptionCode (
+enum class BoothExceptionCode (
     override val code: String,
     override val status: HttpStatus,
     override val message: String

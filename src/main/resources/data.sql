@@ -18,22 +18,22 @@ insert into area_link (area_id, label, href) values
     (1, '우천시 안내', 'https://example.com/area1'),
     (2, '총학생회 문의 창구', 'https://example.com/area2');
 
--- marker (id 1: store, id 2: stop)
-insert into marker (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
+-- Booth (id 1: store, id 2: stop)
+insert into Booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
     (2, 1, 'Store', '바베큐 푸드트럭', '푸드트럭 한줄소개', '푸드트럭 설명', 120, 340, '2025-09-10 10:00:00', '2025-09-10 19:00:00', null, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
     (1, 2, 'Stop', '인자셔틀 정류장', '정류장 한중소개', '정류장 설명', 80, 260, '2025-09-10 09:00:00', '2025-09-10 18:30:00', null, '2025-09-10 00:00:00', '2025-09-10 00:00:00');
 
--- marker_image
-insert into marker_image (marker_id, src) values
-    (1, 'https://example.com/marker/barbecue.jpg'),
-    (2, 'https://example.com/marker/stop_a.jpg');
+-- Booth_image
+insert into Booth_image (Booth_id, src) values
+    (1, 'https://example.com/booth/barbecue.jpg'),
+    (2, 'https://example.com/booth/stop_a.jpg');
 
--- marker_link
-insert into marker_link (marker_id, label, href) values
+-- Booth_link
+insert into Booth_link (Booth_id, label, href) values
     (1, '푸드트럭 회사 페이지', 'https://example.com/store/barbecue'),
     (2, '셔틀 운영 관련 문의', 'https://example.com/shuttle/a');
 
--- menu (store_id -> marker 1)
+-- menu (store_id -> Booth 1)
 insert into menu (store_id, image, name, price, created_at, modified_at) values
     (1, 'https://example.com/menu/barbecue_basic.jpg', '기본 바베큐', 10000, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
     (1, 'https://example.com/menu/barbecue_spicy.jpg', '매운 바베큐', 10500, '2025-09-10 00:00:00', '2025-09-10 00:00:00');
@@ -53,7 +53,7 @@ insert into post_link (post_id, label, href) values
     (1, '총학생회 문의 창구', 'https://example.com/event/schedule'),
     (2, '총학생회 문의 창구', 'https://example.com/shuttle/update');
 
--- stop_time (stop_id -> marker 2)
+-- stop_time (stop_id -> Booth 2)
 insert into stop_time (stop_id, time) values
     (2, '08:00:00'),
     (2, '09:00:00');

@@ -3,7 +3,6 @@ package com.lineup.skku.area
 import com.lineup.skku.common.BaseEntity
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
-import com.lineup.skku.common.Point
 import jakarta.persistence.*
 
 @Entity

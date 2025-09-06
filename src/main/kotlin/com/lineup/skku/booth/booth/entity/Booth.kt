@@ -1,4 +1,4 @@
-package com.lineup.skku.marker.marker.entity
+package com.lineup.skku.booth.booth.entity
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
@@ -7,8 +7,8 @@ import com.lineup.skku.common.BaseEntity
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
 import com.lineup.skku.common.Point
-import com.lineup.skku.marker.category.Category
-import com.lineup.skku.marker.marker.MarkerUpdateDto
+import com.lineup.skku.booth.category.Category
+import com.lineup.skku.booth.booth.BoothUpdateDto
 import jakarta.persistence.*
 
 @Entity
@@ -19,12 +19,12 @@ import jakarta.persistence.*
     property = "dtype"
 )
 @JsonSubTypes(value = [
-    JsonSubTypes.Type(value = Marker::class, name = "marker"),
+    JsonSubTypes.Type(value = Booth::class, name = "Booth"),
     JsonSubTypes.Type(value = Gate::class, name = "gate"),
     JsonSubTypes.Type(value = Stop::class, name = "stop"),
     JsonSubTypes.Type(value = Store::class, name = "store")
 ])
-class Marker (
+class Booth (
     id: Long = 0L,
 
     @ManyToOne
@@ -51,19 +51,19 @@ class Marker (
     var hour: Hour,
 
     @ElementCollection(fetch = FetchType.EAGER)
-    @JoinTable(name = "marker_image",
-        joinColumns = [JoinColumn(name = "marker_id")])
+    @JoinTable(name = "booth_image",
+        joinColumns = [JoinColumn(name = "booth_id")])
     @Column(name = "src")
     val images: MutableList<String> = mutableListOf(),
 
     @ElementCollection(fetch = FetchType.EAGER)
-    @JoinTable(name = "marker_link",
-        joinColumns = [JoinColumn(name = "marker_id")])
+    @JoinTable(name = "booth_link",
+        joinColumns = [JoinColumn(name = "booth_id")])
     val links: MutableList<Link> = mutableListOf()
 
 ) : BaseEntity(id) {
 
-    fun update(dto: MarkerUpdateDto) {
+    fun update(dto: BoothUpdateDto) {
         name = dto.name ?: name
         summary = dto.summary ?: summary
         description = dto.description ?: description

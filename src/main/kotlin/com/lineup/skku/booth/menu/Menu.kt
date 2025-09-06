@@ -1,7 +1,7 @@
-package com.lineup.skku.marker.menu
+package com.lineup.skku.booth.menu
 
+import com.lineup.skku.booth.booth.entity.Store
 import com.lineup.skku.common.BaseEntity
-import com.lineup.skku.marker.marker.entity.Store
 import jakarta.persistence.*
 
 @Entity

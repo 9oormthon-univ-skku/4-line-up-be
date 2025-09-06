@@ -1,11 +1,11 @@
-package com.lineup.skku.marker.marker.entity
+package com.lineup.skku.booth.booth.entity
 
 import com.lineup.skku.area.Area
 import com.lineup.skku.common.Hour
 import com.lineup.skku.common.Link
 import com.lineup.skku.common.Point
-import com.lineup.skku.marker.category.Category
-import com.lineup.skku.marker.marker.StopUpdateDto
+import com.lineup.skku.booth.category.Category
+import com.lineup.skku.booth.booth.StopUpdateDto
 import jakarta.persistence.*
 import java.time.LocalTime
 
@@ -27,7 +27,7 @@ class Stop (
     @Column(name = "time")
     private val times: MutableList<LocalTime> = mutableListOf()
 
-) : Marker(id, area, category, name, summary, description, point, hour, images, links) {
+) : Booth(id, area, category, name, summary, description, point, hour, images, links) {
 
     fun update(dto: StopUpdateDto) {
         name = dto.name ?: name
