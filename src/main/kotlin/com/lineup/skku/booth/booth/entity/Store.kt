@@ -22,10 +22,9 @@ class Store (
     point: Point,
     hour: Hour,
     images: MutableList<String> = mutableListOf(),
-    links: MutableList<Link> = mutableListOf()
-
-) : Marker(id, area, category, name, summary, description, point, hour, images, links) {
-
+    links: MutableList<Link> = mutableListOf(),
+    @OneToMany(mappedBy = "store", cascade = [CascadeType.ALL], orphanRemoval = true)
+    private val menus: MutableList<Menu> = mutableListOf()
 ) : Booth(id, area, category, name, summary, description, point, hour, images, links) {
     fun update(dto: StoreUpdateDto) {
         name = dto.name ?: name
