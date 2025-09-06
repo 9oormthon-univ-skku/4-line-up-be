@@ -7,12 +7,13 @@ import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
+@Transactional(readOnly = true)
 fun MarkerRepository.findByIdOrThrow(id: Long) = findByIdOrNull(id) ?: throw CodeException(MarkerExceptionCode.NOT_FOUND)
-fun MarkerRepository.deleteByIdOrThrow(id: Long) = {
+fun MarkerRepository.deleteByIdOrThrow(id: Long) {
     findByIdOrThrow(id)
     deleteById(id)
 }
 
 @Repository
-@Transactional(readOnly = true)
+@Transactional
 interface MarkerRepository: JpaRepository<Marker, Long>

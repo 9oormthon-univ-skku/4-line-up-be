@@ -7,12 +7,13 @@ import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
+@Transactional(readOnly = true)
 fun CategoryRepository.findByIdOrThrow(id: Long) = findByIdOrNull(id) ?: throw CodeException(MarkerExceptionCode.CATEGORY_NOT_FOUND)
-fun CategoryRepository.deleteByIdOrThrow(id: Long) = {
+fun CategoryRepository.deleteByIdOrThrow(id: Long) {
     findByIdOrThrow(id)
     deleteById(id)
 }
 
 @Repository
-@Transactional(readOnly = true)
+@Transactional
 interface CategoryRepository: JpaRepository<Category, Long>

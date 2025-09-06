@@ -6,8 +6,9 @@ import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
+@Transactional(readOnly = true)
 fun AreaRepository.findByIdOrThrow(id: Long) = findByIdOrNull(id) ?: throw CodeException(AreaExceptionCode.NOT_FOUND)
 
 @Repository
-@Transactional(readOnly = true)
+@Transactional
 interface AreaRepository: JpaRepository<Area, Long>

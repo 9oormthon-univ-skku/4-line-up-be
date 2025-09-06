@@ -7,13 +7,16 @@ import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 import java.util.*
 
+@Transactional(readOnly = true)
 fun MenuRepository.findByIdAndStoreIdOrThrow(id: Long, storeId: Long): Menu = findByIdAndStore_Id(id, storeId).orElseThrow({
     throw CodeException(MarkerExceptionCode.MENU_NOT_FOUND)
 })
 
 @Repository
-@Transactional(readOnly = true)
+@Transactional
 interface MenuRepository: JpaRepository<Menu, Long> {
+    @Transactional(readOnly = true)
     fun findAllByStore_Id(storeId: Long): List<Menu>
+    @Transactional(readOnly = true)
     fun findByIdAndStore_Id(id: Long, storeId: Long): Optional<Menu>
 }

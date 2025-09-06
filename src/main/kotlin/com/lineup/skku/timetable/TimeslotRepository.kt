@@ -6,12 +6,13 @@ import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
+@Transactional(readOnly = true)
 fun TimeslotRepository.findByIdOrThrow(id: Long) = findByIdOrNull(id) ?: throw CodeException(TimeslotExceptionCode.NOT_FOUND)
-fun TimeslotRepository.deleteByIdOrThrow(id: Long) = {
+fun TimeslotRepository.deleteByIdOrThrow(id: Long) {
     findByIdOrThrow(id)
     deleteById(id)
 }
 
 @Repository
-@Transactional(readOnly = true)
+@Transactional
 interface TimeslotRepository: JpaRepository<Timeslot, Long>
