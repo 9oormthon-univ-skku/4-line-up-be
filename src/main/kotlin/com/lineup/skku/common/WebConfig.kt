@@ -16,7 +16,9 @@ class WebConfig : WebMvcConfigurer {
                 "http://line-up-preview.vercel.app",
                 "https://line-up-preview.vercel.app",
                 "http://line-up-main.vercel.app",
-                "https://line-up-main.vercel.app"
+                "https://line-up-main.vercel.app",
+                "http://eskara.line-up.kr",
+                "https://eskara.line-up.kr"
             )
             .allowedMethods("*")
             .allowedHeaders("*")
