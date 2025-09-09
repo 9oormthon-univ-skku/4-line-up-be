@@ -17,7 +17,7 @@ import java.time.LocalTime
     property = "dtype"
 )
 @JsonSubTypes(value = [
-    JsonSubTypes.Type(value = BoothCreateDto::class, name = "Booth"),
+    JsonSubTypes.Type(value = BoothCreateDto::class, name = "booth"),
     JsonSubTypes.Type(value = GateCreateDto::class, name = "gate"),
     JsonSubTypes.Type(value = StopCreateDto::class, name = "stop"),
     JsonSubTypes.Type(value = StoreCreateDto::class, name = "store")

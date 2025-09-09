@@ -1,37 +1,42 @@
 package com.lineup.skku.area
 
+import com.lineup.skku.booth.booth.BoothRepository
+import com.lineup.skku.common.CodeException
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service
 @Transactional
 class AreaService (
-    private val repository: AreaRepository,
-    private val converter: AreaConverter
+    private val areaRepository: AreaRepository,
+    private val boothRepository: BoothRepository,
+    private val areaConverter: AreaConverter
 ) {
     fun create(dto: AreaCreateDto): Area {
-        val new = converter.toEntity(dto)
-        return repository.save(new)
+        val new = areaConverter.toEntity(dto)
+        return areaRepository.save(new)
     }
 
     @Transactional(readOnly = true)
     fun findAll(): List<Area> {
-        return repository.findAll()
+        return areaRepository.findAll()
     }
 
     @Transactional(readOnly = true)
     fun findById(id: Long): Area {
-        return repository.findByIdOrThrow(id)
+        return areaRepository.findByIdOrThrow(id)
     }
 
     fun update(id: Long, dto: AreaUpdateDto) {
-        val found = repository.findByIdOrThrow(id)
+        val found = areaRepository.findByIdOrThrow(id)
         found.update(dto)
-        repository.save(found)
+        areaRepository.save(found)
     }
 
     fun delete(id: Long) {
-        val found = repository.findByIdOrThrow(id)
-        repository.delete(found)
+        val found = areaRepository.findByIdOrThrow(id)
+        if (boothRepository.findAllByAreaId(id).isNotEmpty())
+            throw CodeException(AreaExceptionCode.DELETE_AREA_WITH_BOOTH)
+        areaRepository.delete(found)
     }
 }

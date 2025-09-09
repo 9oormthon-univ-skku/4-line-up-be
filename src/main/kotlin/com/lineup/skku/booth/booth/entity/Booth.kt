@@ -19,7 +19,7 @@ import jakarta.persistence.*
     property = "dtype"
 )
 @JsonSubTypes(value = [
-    JsonSubTypes.Type(value = Booth::class, name = "Booth"),
+    JsonSubTypes.Type(value = Booth::class, name = "booth"),
     JsonSubTypes.Type(value = Gate::class, name = "gate"),
     JsonSubTypes.Type(value = Stop::class, name = "stop"),
     JsonSubTypes.Type(value = Store::class, name = "store")

@@ -16,4 +16,7 @@ fun BoothRepository.deleteByIdOrThrow(id: Long) {
 
 @Repository
 @Transactional
-interface BoothRepository: JpaRepository<Booth, Long>
+interface BoothRepository: JpaRepository<Booth, Long> {
+    fun findAllByAreaId(areaId: Long): List<Booth>
+    fun findAllByCategory_Id(categoryId: Long): List<Booth>
+}

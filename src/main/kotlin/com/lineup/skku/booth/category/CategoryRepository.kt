@@ -9,10 +9,6 @@ import org.springframework.transaction.annotation.Transactional
 
 @Transactional(readOnly = true)
 fun CategoryRepository.findByIdOrThrow(id: Long) = findByIdOrNull(id) ?: throw CodeException(BoothExceptionCode.CATEGORY_NOT_FOUND)
-fun CategoryRepository.deleteByIdOrThrow(id: Long) {
-    findByIdOrThrow(id)
-    deleteById(id)
-}
 
 @Repository
 @Transactional
