@@ -1,18 +1,18 @@
--- category TODO icon
+-- category
 insert into category (name, icon, color, created_at, modified_at) values
-('무대', 'basketball', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('부스', 'flag', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('게이트', 'gate', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('정류장', 'bus', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('가게', 'store', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('주점', 'bar', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('굿즈', 't-shirts', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('식당', 'restaurant', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('화장실', 'toilet', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('포토부스', 'camera', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('분리수거', 'trash', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+('무대', 'https://d3v6v16qfe5bon.cloudfront.net/icons/basketball.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('부스', 'https://d3v6v16qfe5bon.cloudfront.net/icons/flag.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('게이트', 'https://d3v6v16qfe5bon.cloudfront.net/icons/run.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('정류장', 'https://d3v6v16qfe5bon.cloudfront.net/icons/bus.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('가게', 'https://d3v6v16qfe5bon.cloudfront.net/icons/store.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('주점', 'https://d3v6v16qfe5bon.cloudfront.net/icons/bar.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('굿즈', 'https://d3v6v16qfe5bon.cloudfront.net/icons/shirt.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('식당', 'https://d3v6v16qfe5bon.cloudfront.net/icons/restaurant.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('화장실', 'https://d3v6v16qfe5bon.cloudfront.net/icons/toilet.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('포토부스', 'https://d3v6v16qfe5bon.cloudfront.net/icons/camera.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('분리수거', 'https://d3v6v16qfe5bon.cloudfront.net/icons/trash.svg', '#043113', '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
--- booth, 주간 부스
+-- booth, 주간 부스 TODO image
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 2, 'Booth', '잡았S:CATCH', '총학생회와 함께 ESKARA를 꽉! 잡을 준비 되셨나요?, 초록의 파도 속에서 즐거운 추억을 CATCH 해가세요!', '**1398을 잡았S:CATCH!**\n성균관 설립 연도 1398년, 그 숫자를 쌀로 맞춰라!\n쌀알을 저울에 올렸을 때 **139.8g**에 가장 가까운 사람이 승리!\n\n**운명의 사람을 잡았S:CATCH!**\n제시된 키워드에 맞는 상대 캠퍼스를 찾아라!\n둘이서 미니게임 이구동성에 도전!\n*어맛? 우리 … 운명인가봐*', 120, 280, '2025-09-11 10:00:00', '2025-09-11 16:00:00', null, '2025-09-9 00:00:00', '2025-09-11 00:00:00'),
 (1, 2, 'Booth', '수제로켓전문점 아레스 🚀', 'ARES는 성균관대학교 유일의 아마추어 로켓 제작 학술 동아리로 로켓공학을 이론과 실습을 통해 연구하는 동아리입니다! 누구든 관심과 열정만 있다면 환영합니다!', '수제로켓공방에서 로켓을 만들 때 필요한 자질들을 키워보세요!! 🚀\n게임에 참여하시고 굿즈와 기프티콘 받아가세요!', 180, 320, '2025-09-11 10:00:00', '2025-09-11 16:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
@@ -31,17 +31,17 @@ insert into booth (area_id, category_id, dtype, name, summary, description, x, y
 (1, 6, 'Store', '슈퍼 정통 X 경영 브라더스', '[포브스 선정] 쿠파가 탐내는 안주 1위 🍺', '쿠파도 탐낼 안주, 피치공주도 반할 이벤트 🏰\n\n쿠파는 피치를 원하고 피치는 마리오를 원하고 마리오는 여러분을 원해요 ㅜㅜ\n쿠파가 피치공주를 데려간다? 하지만 괜찮다\n이집 안주는 맛있으니까\n\n여기아니면 어디간단 마리오 🍄\n빨리오란 마리오 ⭐\n친구랑 같이오란 와루이지 🪙\n\n🍄사전 예약 정보\n⏱️ 1타임: 18:00 - 19:30\n⏱️ 2타임: 19:40 - 21:10\n⏱️ 3타임: 21:20 - 22:50\n\n🍄입장료\n- 경영대학 및 정통대학 원전공생 - 16,000원\n- 경영대학 및 정통대학을 제외한 성균인 - 18,000원\n- 성균관대 재적생이 아닌 외부인 - 20,000원\n*1타임 사전예약 시 인당 2,000원 할인', 100, 150, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(1, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/super1.webp'),
-(1, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/super2.webp');
+(1, 'https://d3v6v16qfe5bon.cloudfront.net/booths/1_1.webp'),
+(1, 'https://d3v6v16qfe5bon.cloudfront.net/booths/1_2.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '쿠파의 용암 떡볶이🌶️', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '슈퍼스타 튀김 세트🍟', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '요시 알 주먹밥🍙', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '받아라! 파이어마리오 볼🥏', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '꿈틀! 밟아봐 굼바🍫', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '음료수🥤', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '라면🍜', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(10, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '쿠파의 용암 떡볶이🌶️', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(10, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '슈퍼스타 튀김 세트🍟', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(10, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '요시 알 주먹밥🍙', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(10, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '받아라! 파이어마리오 볼🥏', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(10, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '꿈틀! 밟아봐 굼바🍫', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(10, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '음료수🥤', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(10, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '라면🍜', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
 (10, '사전예약', 'https://forms.gle/hAd75ksARGiuYEaB9'),
@@ -52,26 +52,26 @@ insert into booth (area_id, category_id, dtype, name, summary, description, x, y
 (1, 6, 'Store', '♨️불가마 24시 스파동 숙/취/전/문', '♨️불가마 24시 스파동 숙/취/전/문', '2025 ESKARA!!!\n연석동아리연합회가 제대로 미쳤어요 🥵\n(공자: 인정;)\n\n불가마보다 화끈한 인심,\n얼음방보다 시원한 메뉴가 여러분을 기다립니다!\n\n역대급 메뉴 라인업과 함께\n술찜질 한 번 시원하게 가보자고 😵\n\n💸 입욕료\n성균관대학교 중앙동아리인 15,000원\n(중앙동아리인이 아닌) 성균인 17,000원\n비성균인 20,000원\n\n* 1개 타임, 1인 기준\n* 2개 타임 이상 연속 예약시 2000원 할인\n\n1부: 18:00~19:30\n2부: 19:40~21:10\n3부: 21:20~23:00', 120, 170, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/bool.webp');
+(11, 'https://d3v6v16qfe5bon.cloudfront.net/booths/2.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '맥반석 냉동삼겹살 🥩', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '얼음방 ice묵사발 🥶', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '온천수 어묵탕 🍢', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '황토숙성 감자튀김 🍟', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '장인이 구운 계란 🥚', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '시원한 살얼음식혜 🧊', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(11, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '맥반석 냉동삼겹살 🥩', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(11, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '얼음방 ice묵사발 🥶', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(11, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '온천수 어묵탕 🍢', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(11, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '황토숙성 감자튀김 🍟', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(11, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '장인이 구운 계란 🥚', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(11, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '시원한 살얼음식혜 🧊', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
 (11, '사전예약', 'https://forms.gle/4K88qWtXVyQTW2Zc8'),
 (11, '인스타그램', 'https://www.instagram.com/p/DOTQUusjyL_/?utm_source=ig_web_copy_link&igsh=MTYzeDFmd2IxbnEwcQ==');
 
--- 3. 솦융이랑 유대랑 싸우나 TODO image
+-- 3. 솦융이랑 유대랑 싸우나
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', '솦융이랑 유대랑 싸우나', '♨️솦융이랑 유대랑 싸우나♨️에서 식혜로 머리 좀 식혜고 가실래요…? 🧠🌡️', '👤👤뭐야…?👤👥**솦융이랑 유대랑 싸우나봐…**👥 👤수군수군....👥👥엥 왜 싸우는데…?👤👥웅성웅성👤👤👥\n\n……알고 보니 솦융이랑 유대랑 싸우나를 개업한 거였다네요 💦💦\n\n🔊 Boys&Girls을 위한 합석 시스템 2/4/시(아님)/양/일/운/영 🥵🥵\n\n♨️ 양일 이용시간\n◈ 1타임 (18:30~20:00)\n◈ 2타임 (20:10~21:40)\n◈ 3타임 (21:50~23:00)\n\n♨️ 타임별 이용 금액\n소프트웨어융합대학 및 유학대학 소속 원전공생\n| 사전예약 15,000원 / 워크인 17,000원\n그 외 성균인 | 사전예약 17,000원 / 워크인 19,000원\n非성균인 | 사전예약 19,000원 / 워크인 21,000원', 140, 190, '2025-09-11 18:30:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/13.webp');
+    (12, 'https://d3v6v16qfe5bon.cloudfront.net/booths/3.webp');
 
 insert into booth_link (booth_id, label, href) values
 (12, '인스타그램', 'https://www.instagram.com/p/DOWKw4lkoYU/?utm_source=ig_web_copy_link&igsh=dHA4dHR2OWxoNDg0');
@@ -81,31 +81,35 @@ insert into booth (area_id, category_id, dtype, name, summary, description, x, y
 (1, 6, 'Store', '인어공酒(주)', '무슨 9월이 이렇게 덥고 습해?💦 차라리 바닷속에서 사는 게 낫겠다!', '그래서 만들었습니다. 해저호텔.\n시원한 바닷속에서 술도 마시고 축제도 즐겨요!\n\n**입장료**\n<사전예약>\n✅ 사범대학, 성균융합원 소속: 16,000원\n✅ 타 단과대학 성균인: 19,000원\n✅ 외부인: 21,000원\n\n<현장접수>\n✅ 사범대학, 성균융합원 소속: 17,000원\n✅ 타 단과대학 성균인: 20,000원\n✅ 외부인: 22,000원', 160, 210, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/ariel.webp'),
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/ariel2.webp');
+(13, 'https://d3v6v16qfe5bon.cloudfront.net/booths/4_1.webp'),
+(13, 'https://d3v6v16qfe5bon.cloudfront.net/booths/4_2.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🪼 물고기들 눈 감아…어묵탕', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🪼 인어공주도 몰래 먹는 두부김치', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🪼 고래 싸움에 등 터진 새우볶음밥', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🪼 해적도 탐내는 황금빛 황도', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🪼 상어 이빨 나쵸', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(13, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🪼 물고기들 눈 감아…어묵탕', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(13, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🪼 인어공주도 몰래 먹는 두부김치', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(13, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🪼 고래 싸움에 등 터진 새우볶음밥', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(13, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🪼 해적도 탐내는 황금빛 황도', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(13, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🪼 상어 이빨 나쵸', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
 (13, '사전예약', 'https://forms.gle/kBYurq3R1c27VZGs6'),
 (13, '인스타그램', 'https://www.instagram.com/p/DOVJYCekpaE/?utm_source=ig_web_copy_link&igsh=ZjJudzFkamVzeG4x');
 
--- 5. 예스(yes), 크리스마스! TODO image
+-- 5. 예스(yes), 크리스마스!
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', '예스(yes), 크리스마스!', '1398년 성균관 주막, 잊지 못할 한 철의 추억을 빚는다.', '**컨셉 소개**\n\n성균관대학교 건학 연도 **1398년**을 모티브로 한 **조선시대 주막 콘셉트 체험형 주점**!\n\n포토존과 체험 요소를 통해 **ESKARA:초록의 파도**에서 특별한 하루를 선사합니다.\n\n전통의 정취 속에서 특별한 ''가을 추억''을 만들어보세요. 🌙✨\n\n*약과는 서비스~ ♡̊̈*', 180, 230, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
+insert into booth_image (booth_id, src) values
+(14, 'https://d3v6v16qfe5bon.cloudfront.net/booths/5_1.webp'),
+(14, 'https://d3v6v16qfe5bon.cloudfront.net/booths/5_2.webp');
+
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '묵사발', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '두부김치', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '김치전 / 부추전', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '장국', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '컵라면', 1500, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '식혜', 1000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(14, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '묵사발', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(14, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '두부김치', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(14, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '김치전 / 부추전', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(14, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '장국', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(14, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '컵라면', 1500, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(14, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '식혜', 1000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
 (14, '사전예약', 'https://forms.gle/EEQs6EfcXbzYyG7V9'),
@@ -116,9 +120,9 @@ insert into booth (area_id, category_id, dtype, name, summary, description, x, y
 (1, 6, 'Store', '골 때리는 킥 호프', '📢 아, 말씀드리는 순간 시작하는 어마어마한 빅매치!', '시작하자마자 분위기는 이미 풀타임을 넘어 승부차기 직전! 하지만 이 경기의 결과는 언제나 같습니다.가득한 웃음과 잊지못할 추억, 그리고 내일 약간 힘든 숙취까지. 🍻\n\n2025 에스카라, 여러분의 오늘을 가장 빛나는 하이라이트로 만들어 드립니다!\n\n**입장료**\n\n**사전예약: 8000원\n\n현장대기:\n[성균인] 10000원\n[외부인] 11000원\n\n[1타임] 18:00 ~ 20:00\n[2타임] 20:00 ~ 21:30\n[3타임] 21:30 ~ 23:00**', 200, 250, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(15, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/soccer1.webp'),
-(15, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/soccer2.webp'),
-(15, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/soccer3.webp');
+(15, 'https://d3v6v16qfe5bon.cloudfront.net/booths/6_1.webp'),
+(15, 'https://d3v6v16qfe5bon.cloudfront.net/booths/6_2.webp'),
+(15, 'https://d3v6v16qfe5bon.cloudfront.net/booths/6_3.webp');
 
 insert into booth_link (booth_id, label, href) values
 (15, '사전예약', 'https://forms.gle/uoMifkozS78dpPp86'),
@@ -129,39 +133,39 @@ insert into booth (area_id, category_id, dtype, name, summary, description, x, y
 (1, 6, 'Store', '이자카藥 (IZAKAYAK)', '✨ 약대가 말아주는 단짠단짠 일본 감성 주점 ✨', '💹이날의 환율 : ¥ 1,000 = 10,000 ₩\n\n💰 입장료(인당)\n성균인: ¥ 1,000\n외부인: ¥ 1,500\n(현장 입장 시 + ¥ 200 추가)', 220, 270, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(7, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/izakaya1.webp'),
-(7, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/izakaya3.webp');
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/booths/7_1.webp'),
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/booths/7_2.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '에다마메🫛', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '김부각🥢', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '오코노미야키🥬🐙', 12000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '오뎅 나베🍢', 9000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '유즈폰즈 가라아게🍋🍗', 14000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '모둠 야키토리 셋또🍡', 12000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '철판 교자 🥟🔥', 9000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '스페셜 하이보루✨', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '에다마메🫛', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '김부각🥢', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '오코노미야키🥬🐙', 12000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '오뎅 나베🍢', 9000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '유즈폰즈 가라아게🍋🍗', 14000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '모둠 야키토리 셋또🍡', 12000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '철판 교자 🥟🔥', 9000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(16, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '스페셜 하이보루✨', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
 (16, '사전예약', 'https://forms.gle/x6E3Ea8z2ASdjFdp9'),
-(16, '인스타그램', 'https://www.notion.so/7-IZAKAYAK-2678b91a086b80e48976f9dbb263b80c');
+(16, '노션', 'https://www.notion.so/7-IZAKAYAK-2678b91a086b80e48976f9dbb263b80c');
 
 -- 8. 만병통취약💊
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', '만병통취약💊', '💊 오늘 밤, 처방은 술 한 잔! 🍺✨', '🍻 약대로 놀러오면 부작용은 ''행복''뿐! 😍\n\n🥂 오늘의 약효: 친구와 웃음, 술 한잔 💊\n📌 복용법: 주점에서 무한 리필! 🔄\n\n🍶 스트레스 OUT 👉 만병통치 처방전은 여기서! 🧾\n💊 약학대학 학생회 주점에서 힐링하세요 🌙\n\n✅️ 입장료: 성균인 15,000원 / 외부인 18,000원\n(1타임 사전예약 할인: 성균인 12,000원 / 외부인 15,000원)', 240, 290, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(8, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/man1.webp'),
-(8, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/man2.webp');
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/booths/8_1.webp'),
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/booths/8_2.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(17, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍢 오뎅탕이레놀', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(17, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🥢 아랍두부김치', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(17, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🌭 모둠소세진통제', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(17, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🌽 나(약)쵸', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(17, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🔥 까르르불닭', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(17, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍗 닭다리 과자', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(17, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🥔 마카로니', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍢 오뎅탕이레놀', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🥢 아랍두부김치', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🌭 모둠소세진통제', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🌽 나(약)쵸', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🔥 까르르불닭', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍗 닭다리 과자', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(17, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🥔 마카로니', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
 (17, '인스타그램', 'https://www.instagram.com/p/DOSYp02E0IJ/?utm_source=ig_web_copy_link&igsh=NDBpbDN6azJkYWt0');
@@ -171,28 +175,48 @@ insert into booth (area_id, category_id, dtype, name, summary, description, x, y
 (1, 6, 'Store', '컴comm온! 산리오🩵', '미디어커뮤니케이션학과 주점', '**입장료**\n\n🩷 미컴 원전공생 - 16000원\n🩵 성균관대학교 재학/휴학생 - 18000원\n🩶 외부인 - 20000원\n\n**[1타임]** 18:00~19:30\n**[2타임]** 19:45~21:15\n**[3타임]** 21:30~23:00', 260, 310, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(9, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/come1.webp');
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/booths/9.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '😈 쿠로미의 악랄한 장난 (불닭볶음면)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍥 마이멜로디의 순정 (기본 라면)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍳 구데타마의 침대 (볶음밥)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍿 폼폼푸린의 꽃다발 (팝콘)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍟 포차코의 다이어트 실패 (감자튀김)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍡 시나모롤의 쫀득 뱃살 (꿀가래떡)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '💦 한교동의 눈물 (블루레몬 에이드)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍑 모카의 복숭아 알레르기 (복숭아에이드)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍎 키티의 리본 볶음 (떡볶이)', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(18, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🍜 산리오 중국여행 (마라탕)', 5000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '😈 쿠로미의 악랄한 장난 (불닭볶음면)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍥 마이멜로디의 순정 (기본 라면)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍳 구데타마의 침대 (볶음밥)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍿 폼폼푸린의 꽃다발 (팝콘)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍟 포차코의 다이어트 실패 (감자튀김)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍡 시나모롤의 쫀득 뱃살 (꿀가래떡)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '💦 한교동의 눈물 (블루레몬 에이드)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍑 모카의 복숭아 알레르기 (복숭아에이드)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍎 키티의 리본 볶음 (떡볶이)', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(18, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍜 산리오 중국여행 (마라탕)', 5000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
 (18, '사전예약', 'https://forms.gle/BimAw2kFrzLXAbQ6A'),
 (18, '인스타그램', 'https://www.instagram.com/p/DOVX9FWjyxr/?utm_source=ig_web_copy_link&igsh=MWJjamVydzUzcXpuaw==');
 
--- TODO
 -- 10. 부추전, 김치전, 인자전, let’s go
--- https://forms.gle/WeEGbHWijKHSY1BC8
--- https://skkuscatchhssc.notion.site/10-let-s-go-2678b91a086b80cbb626d27dc106f010
+insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
+(1, 6, 'Store', '부추전, 김치전, 인자전, let’s go', '1398년 성균관 주막, 잊지 못할 한 철의 추억을 빚는다.', '성균관대학교의 건학 연도, **1398년**에서 영감을 얻은 특별한 공간!\n\n올해 축제에서는 **조선시대 주막 콘셉트 체험형 주점**이 여러분을 기다리고 있습니다. 🍶✨\n\n전통의 정취 가득한 가을밤,\n\n노랫가락과 웃음소리 속에서 오직 여기서만 만날 수 있는 ‘추억 한 모금’을 즐겨보세요. 🌙\n\n“아씨~ 도련님~” 하고 반겨줄 **건실한 노비들**이,\n\n정성껏 준비한 자리에 여러분을 모시기 위해 대기 중입니다!\n\n한 번 들어오면, 시간 가는 줄 모르고 놀다 가실 걸요? 😏\n\n올가을, 친구들과 함께\n\n**1398년으로 시간여행** 떠나보지 않으실래요?', 260, 310, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+
+insert into booth_image (booth_id, src) values
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/booths/10_1.webp'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/booths/10_2.webp');
+
+insert into menu (store_id, image, name, price, created_at, modified_at) values
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍜 메인메뉴 한 상 (첫 한상은 입장료 입금 후 한 테이블에 한 번 제공)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🥢 비빔국수 (1회 무료리필)', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🥩 제육볶음', 8000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🥒 묵사발 (1회 무료리필)', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🥘 부추전 & 김치전', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍺 안주플래터 (구운쥐포채 + 버터오징어 + 땅콩믹스)', 10000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍯 식혜 + 약과 세트 (사전예약자 기본 제공)', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '💸 서브메뉴 전체 구매 시 할인', -1000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🍪 마카로니 과자 (무한리필)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🥣 장국 (무한리필)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(19, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '💧 물 (무한리필)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+
+insert into booth_link (booth_id, label, href) values
+(19, '사전예약', 'https://forms.gle/WeEGbHWijKHSY1BC8'),
+(19, '인스타그램', 'https://skkuscatchhssc.notion.site/10-let-s-go-2678b91a086b80cbb626d27dc106f010');
 
 -- day1
 -- 1. 헤라의 불시착
@@ -200,59 +224,59 @@ insert into booth (area_id, category_id, dtype, name, summary, description, x, y
 (1, 6, 'Store', '헤라의 불시착', '올림푸스의 신들이 성균관대에 불시착?!', '제우스⚡️: 뭐야.. 여기가 어디야?\n디오니소스🍷: 너 때문에 흥이 깨져버렸으니까 책임져\n오르페우스🎵: 알겠습니다. 디오니소스님\n\n이제 캠퍼스가 신들의 연회장으로 변신합니다\n가장 찬란한 가을밤, ✨별들의 연회✨에서 신들과 함께 놀아보세요\n\n**입장료**\n\n🏛️사전예약🏛️\n👥헤라/로타랙트 부원 15,000원\n👥성균인 17,000원\n👥외부인 19,000원\n\n🏛️현장접수🏛️\n👥헤라/로타랙트 부원 16,000원\n👥성균인 18,000원\n👥외부인 20,000원', 280, 150, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/hera1.webp'),
-(10, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/hera2.webp');
+(20, 'https://d3v6v16qfe5bon.cloudfront.net/booths/11_1.webp'),
+(20, 'https://d3v6v16qfe5bon.cloudfront.net/booths/11_2.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(19, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '치즈 플레이트', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(19, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '넥타르(포도주스+탄산수)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(19, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '포세이돈의 오뎅탕', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(19, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '아테나의 떡볶이', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(19, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '데메테르의 감자와 소시지', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(19, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '제우스의 치즈불닭볶음면', 5000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(20, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '치즈 플레이트', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(20, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '넥타르(포도주스+탄산수)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(20, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '포세이돈의 오뎅탕', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(20, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '아테나의 떡볶이', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(20, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '데메테르의 감자와 소시지', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(20, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '제우스의 치즈불닭볶음면', 5000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
-(19, '사전예약', 'https://docs.google.com/forms/d/e/1FAIpQLSdobACDxAyFkmF2inzTQ1VpSMqio2KdyVomvOSVuR7GOcinig/viewform'),
-(19, '인스타그램', 'https://www.instagram.com/p/DONpzDMgCOR/?utm_source=ig_web_copy_link&igsh=MWd0dDlheTVubGt3dQ==');
+(20, '사전예약', 'https://docs.google.com/forms/d/e/1FAIpQLSdobACDxAyFkmF2inzTQ1VpSMqio2KdyVomvOSVuR7GOcinig/viewform'),
+(20, '인스타그램', 'https://www.instagram.com/p/DONpzDMgCOR/?utm_source=ig_web_copy_link&igsh=MWd0dDlheTVubGt3dQ==');
 
 -- 2. ㄴr는… ㄱr끔… 술을 흘린ㄷㅏ…
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', 'ㄴr는… ㄱr끔… 술을 흘린ㄷㅏ…', 'ㄱ ㅣ 억 ㄴ r니..? 싸이월드 / Y2K 감성주점', '싸이월드, 미니홈피, 도토리…\n\n나… 그냥 옛 추억에 잠식돼서…\n이런… 주점… 만들었어…\n\n그때…\n우린… 아무것도 없어도…\n도토리 하나면… 행복했잖아…☆\n\n**입장료**\n\n💃무용학과, 신소재공학부 및 사전예약🕺 [16,000원]\n🌱성균인🌱 [18,000원]\n외부인 [20,000원]\n\n예약 가능 시간💃\n[1부] 18:00 ~ 19:30\n[2부] 19:30 ~ 21:00\n[3부] 21:00 ~ 22:30', 300, 170, '2025-09-11 18:00:00', '2025-09-11 22:30:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/na1.webp'),
-(11, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/na2.webp');
+(21, 'https://d3v6v16qfe5bon.cloudfront.net/booths/12_1.webp'),
+(21, 'https://d3v6v16qfe5bon.cloudfront.net/booths/12_2.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(20, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '제육볶음', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(20, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '참치마요 주먹밥', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(20, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '들기름 계란후라이', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(20, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '꾀돌이, 쫀드기', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(20, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '컵라면', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(21, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '제육볶음', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(21, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '참치마요 주먹밥', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(21, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '들기름 계란후라이', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(21, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '꾀돌이, 쫀드기', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(21, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '컵라면', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
-(20, '사전예약', 'https://naver.me/G4GdyLAl'),
-(20, '인스타그램', 'https://www.instagram.com/p/DOVHiumD9dK/?utm_source=ig_web_copy_link&igsh=YjFtOHlnMnFheTFv');
+(21, '사전예약', 'https://naver.me/G4GdyLAl'),
+(21, '인스타그램', 'https://www.instagram.com/p/DOVHiumD9dK/?utm_source=ig_web_copy_link&igsh=YjFtOHlnMnFheTFv');
 
 -- 3. 우끼끼친
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', '우끼끼친', '2025년, 드디어 원숭이들이 캠퍼스로 상륙했다', '**입장료**\n\n📍입장료(안주 가격은 별도입니다)\n🏃현장:\n공과대학 원전공생 - 1인당 15,000원\n성균인 - 1인당 17,000원\n외부인 - 1인당 25,000원\n\n🎊사전예약 특가:\n공과대학 원전공생 - 1인당 13,000원\n성균인 - 1인당 15,000원\n외부인 - 1인당 20,000원', 320, 190, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(12, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/wookiki1.webp');
+(22, 'https://d3v6v16qfe5bon.cloudfront.net/booths/13.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(21, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '바나나칩과 견과류', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(21, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '원숭이 볶음밥', 12000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(21, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '닭강정', 13000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(21, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '오뎅탕', 11000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(21, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '불파게티', 9000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(21, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '바나나 브륄레', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(21, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '화채', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(22, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '바나나칩과 견과류', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(22, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '원숭이 볶음밥', 12000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(22, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '닭강정', 13000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(22, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '오뎅탕', 11000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(22, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '불파게티', 9000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(22, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '바나나 브륄레', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(22, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '화채', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
-(21, '사전예약', 'https://forms.gle/rHx3GYCnwrBnNpQK7'),
-(21, '인스타그램', 'https://www.instagram.com/p/DOaq0f1EYJb/?utm_source=ig_web_copy_link&igsh=MXE2MjQxdjF3YjZiOQ==');
+(22, '사전예약', 'https://forms.gle/rHx3GYCnwrBnNpQK7'),
+(22, '인스타그램', 'https://www.instagram.com/p/DOaq0f1EYJb/?utm_source=ig_web_copy_link&igsh=MXE2MjQxdjF3YjZiOQ==');
 
 -- day1
 -- 1. 엔젤항공🪽✈️
@@ -260,123 +284,213 @@ insert into booth (area_id, category_id, dtype, name, summary, description, x, y
 (1, 6, 'Store', '엔젤항공🪽✈️', '손님 여러분, 환영합니다. 에스엔젤 소속 엔젤항공 SA1004편은 여러분의 탑승을 기다리고 있습니다. 🪽', '우리 비행기는 2025 에스카라(ESKARA)를 향해 곧 이륙할 예정입니다.\n\n지금부터 즐거운 여행를 함께 떠나보시죠. ✈️\n\n**입장료**\n\n🪽사전예약\n8000원\n\n🪽현장예매\n- 성균인 : 9000원\n- 외부인 : 10000원', 280, 330, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(13, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/angel1.webp');
+(22,'https://d3v6v16qfe5bon.cloudfront.net/booths/14.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(22, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '프레첼', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(22, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '오렌지 주스', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(22, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '치즈 그라탕', 15000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(22, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '구름 떡볶이', 15000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(22, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '닭강정', 15000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(22, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '나쵸', 5000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(22, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '라면', 3500, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(22, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '콘치즈', 8000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '프레첼', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '오렌지 주스', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '치즈 그라탕', 15000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '구름 떡볶이', 15000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '닭강정', 15000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '나쵸', 5000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '라면', 3500, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '콘치즈', 8000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
-(22, '사전예약', 'https://forms.gle/4SYT3pnVduU4cu8Y8'),
-(22, '인스타그램', 'https://www.instagram.com/p/DOVtmDgD5aY/?utm_source=ig_web_copy_link&igsh=MXF6eWN0dTE2ZmU0OA==');
+(24, '사전예약', 'https://forms.gle/4SYT3pnVduU4cu8Y8'),
+(24, '인스타그램', 'https://www.instagram.com/p/DOVtmDgD5aY/?utm_source=ig_web_copy_link&igsh=MXF6eWN0dTE2ZmU0OA==');
 
 -- 2. 가면酒도회 🎭
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', '가면酒도회 🎭', '오늘 밤 무대의 주인공은 바로 당신입니다 🌙', '가면을 쓰고 들어서는 순간,\n당신은 이 밤의 주인공\n\n알 수 없는 사람들과 잔을 부딪히며\n속삭임과 웃음이 흐르는 곳—\n이곳은 바로 가면酒도회\n\n한 잔의 술, 한 개의 가면\n그리고 끝없는 밤\n\n새로운 무대의 주인공을 환영합니다 🎭\n\n입장료\n극회인: 13,000원\n성균인: 15,000원\n외부인: 17,000원\n\n[1타임] 18:00 – 19:30\n[2타임] 19:30 – 21:00\n[3타임] 21:00 – 23:00', 300, 350, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/gamyeon1.webp'),
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/gamyeon2.webp'),
-(14, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/gamyeon3.webp');
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/booths/15_1.webp'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/booths/15_2.webp'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/booths/15_3.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(23, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🌮 가면 속 도리토스 타코', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(23, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🥂 입 안에서 펼쳐지는 카나페 갈라쇼', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(23, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '✨ 황금빛 미트볼 디너쇼', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(23, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🌙 달빛 속 빛나는 콘치즈', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(23, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '컵라면', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(23, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '물', 1000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(23, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '포도 환타', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🌮 가면 속 도리토스 타코', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🥂 입 안에서 펼쳐지는 카나페 갈라쇼', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '✨ 황금빛 미트볼 디너쇼', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🌙 달빛 속 빛나는 콘치즈', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '컵라면', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '물', 1000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(24, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '포도 환타', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
-(23, '사전예약', 'https://docs.google.com/forms/d/1rT_Mm1RE5Jmsd1dtZ8_Myoix8gFjUV0lhAd1Pdr39lE'),
-(23, '인스타그램', 'https://www.instagram.com/p/DOVKSAqAbRC/?utm_source=ig_web_copy_link&igsh=MXVvM2FuODl4dGg5MA==');
+(24, '사전예약', 'https://docs.google.com/forms/d/1rT_Mm1RE5Jmsd1dtZ8_Myoix8gFjUV0lhAd1Pdr39lE'),
+(24, '인스타그램', 'https://www.instagram.com/p/DOVKSAqAbRC/?utm_source=ig_web_copy_link&igsh=MXVvM2FuODl4dGg5MA==');
 
 -- 3. F1: AIimi Pit Stop
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', 'F1: AIimi Pit Stop', '🏎️ "Pit in, All in" 🏎️', '끝나지 않는 레이스, 지치신다고요?\n여기, Pit Stop 에서 연료 충전하고 가세요!\n\n심장은 엔진, 안주는 코너, 알콜은 연료,\nLights out and away we go!\n\n**입장료**\n\n<사전예약(예약금)>\n✳️ 특성학과 학부생: 11,000원\n✳️ 타 단과대학 성균인: 13,000원\n✳️ 외부인: 15,000원\n\n<현장접수>\n🔆 특성학과 학부생: 12,000원\n🔆 타 단과대학 성균인: 14,000원\n🔆 외부인: 16,000원\n\n➕ 1시간 추가 금액: 10,000원\n\n🛞[1타임] 18:00-19:30\n[2타임] 19:30-21:00\n[3타임] 21:00-22:50', 320, 370, '2025-09-11 18:00:00', '2025-09-11 22:50:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(15, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/f1.webp');
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/booths/16.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🃏 GBAston Martin의 Final Lap 떡볶이', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🚨 Gerrari의 엔진 쿨러 화채', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🚧 GLD Bull의 Pit Stop 어니언링&나쵸', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🚦Swilliams의 2가지 플래그 음료', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🎥 Kick SSEber의 썸머 서킷 김치말이국수', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '⚙️ MEDass의 Box Box 치즈 나쵸', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '♣️ PharmLaren의 Pit Stop 마약 콘치즈', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '🎰 GBMErcedes의 브래드 피트도 반한 주먹밥', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(24, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '물', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🃏 GBAston Martin의 Final Lap 떡볶이', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🚨 Gerrari의 엔진 쿨러 화채', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🚧 GLD Bull의 Pit Stop 어니언링&나쵸', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🚦Swilliams의 2가지 플래그 음료', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🎥 Kick SSEber의 썸머 서킷 김치말이국수', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '⚙️ MEDass의 Box Box 치즈 나쵸', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '♣️ PharmLaren의 Pit Stop 마약 콘치즈', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '🎰 GBMErcedes의 브래드 피트도 반한 주먹밥', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(25, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '물', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
-(24, '사전예약', 'https://naver.me/FNItMYPq'),
-(24, '인스타그램', 'https://www.instagram.com/p/DOUW8N-Eufo/?utm_source=ig_web_copy_link&igsh=MXR2NjllcDVicmdkYQ==');
+(25, '사전예약', 'https://naver.me/FNItMYPq'),
+(25, '인스타그램', 'https://www.instagram.com/p/DOUW8N-Eufo/?utm_source=ig_web_copy_link&igsh=MXR2NjllcDVicmdkYQ==');
 
 -- 4. 1루수가 누구야
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', '1루수가 누구야', '📣 오늘 주점 경기 요약드립니다. 맥주 1루타, 칵테일 2루타, 소주 홈런~!', '최종 스코어는 숙취 10 : 간 0\n"오늘 경기 MVP는 여기 온 당신입니다!"\n\n**입장료**\n\n**외야석, 3루석**\n🟢 성균인 : 15,000원 / 사전 예약가 : 14,000원\n🔴 외부인 : 17,000원\n\n**1루석**\n🟢 성균인 : 18,000원 / 사전 예약가 : 17,000원\n🔴 외부인 : 20,000원', 340, 390, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/baseball1.webp'),
-(16, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/baseball2.webp');
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/booths/17_1.webp'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/booths/17_2.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '1️⃣번 두산 나쵸 한입 베어스', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '2️⃣번 롯데 자이언츠 삼진 어묵탕', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '3️⃣번 KT 매지컬 체리콕', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '4️⃣번 키움 히어로즈 에너지드링크 칵테일', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '5️⃣번 NC 다이노스 공룡 모히또', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '6️⃣번 삼성 라이온즈 블루레몬에이드', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '7️⃣번 LG 트윈스 츄러스', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '8️⃣번 한화 이글스 불닭 + 콘치즈', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '9️⃣번 기아 타이거즈 무등산 수박 화채', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(25, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '선발투수 SSG 랜더스 홈런 주먹밥 + 컵라면', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '1️⃣번 두산 나쵸 한입 베어스', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '2️⃣번 롯데 자이언츠 삼진 어묵탕', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '3️⃣번 KT 매지컬 체리콕', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '4️⃣번 키움 히어로즈 에너지드링크 칵테일', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '5️⃣번 NC 다이노스 공룡 모히또', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '6️⃣번 삼성 라이온즈 블루레몬에이드', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '7️⃣번 LG 트윈스 츄러스', 3000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '8️⃣번 한화 이글스 불닭 + 콘치즈', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '9️⃣번 기아 타이거즈 무등산 수박 화채', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(26, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '선발투수 SSG 랜더스 홈런 주먹밥 + 컵라면', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
-(25, '사전예약', 'https://forms.gle/pHKRxAwmH7d4hQXE7'),
-(25, '인스타그램', 'https://www.instagram.com/p/DOUpfytE-EU/?utm_source=ig_web_copy_link&igsh=MXh3OWoycTBhcGlocQ==');
+(26, '사전예약', 'https://forms.gle/pHKRxAwmH7d4hQXE7'),
+(26, '인스타그램', 'https://www.instagram.com/p/DOUpfytE-EU/?utm_source=ig_web_copy_link&igsh=MXh3OWoycTBhcGlocQ==');
 
 -- 5. 술과 취히로의 행방불명
 insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) values
 (1, 6, 'Store', '술과 취히로의 행방불명', '이름을 잃어버린 당신, 신비로운 주점에 초대합니다.', '''술과 취히로의 행방불명''에서 익명의 이름표를 받고, 진짜 인연을 찾아보세요. 따뜻한 홍등 아래, 술 한잔과 함께 새로운 이야기가 시작됩니다.\n\n📌 가격(타임당)\n[성균인] 18,000원\n[외부인] 20,000원\n\n[1타임] 18:00 ~ 19:30\n[2타임] 19:45 ~ 21:15\n[3타임] 21:30 ~ 23:00', 360, 410, '2025-09-11 18:00:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_image (booth_id, src) values
-(17, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/chihiro1.webp');
+(27, 'https://d3v6v16qfe5bon.cloudfront.net/booths/18.webp');
 
 insert into menu (store_id, image, name, price, created_at, modified_at) values
-(26, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '기본 안주(알새우칩)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(26, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '오코노미야끼', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(26, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '주먹밥', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(26, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '닭꼬치', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(26, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '오뎅탕', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(26, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '음료(콜라)', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(26, 'https://dytktlylpptxuzaiiaof.supabase.co/storage/v1/object/public/line-up/placeholder.jpg', '물', 1000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
+(27, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '기본 안주(알새우칩)', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(27, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '오코노미야끼', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(27, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '주먹밥', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(27, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '닭꼬치', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(27, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '오뎅탕', 0, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(27, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '음료(콜라)', 2000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(27, 'https://d3v6v16qfe5bon.cloudfront.net/poster.webp', '물', 1000, '2025-09-11 00:00:00', '2025-09-11 00:00:00');
 
 insert into booth_link (booth_id, label, href) values
-(26, '사전예약', 'https://forms.gle/VR6wrTJ4sQtL1ap27'),
-(26, '인스타그램', 'https://www.notion.so/5-2678b91a086b80aaa84aeb9885c65720');
+(27, '사전예약', 'https://forms.gle/VR6wrTJ4sQtL1ap27'),
+(27, '노션', 'https://www.notion.so/5-2678b91a086b80aaa84aeb9885c65720');
 
 -- booth TODO gate
-INSERT INTO marker (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) VALUES
-(null, 1, 'Booth', '메인 스테이지', '10:00 ~ 상시 입장', NULL, 0, 0, '2025-09-11 10:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 2, 'Booth', '프로모션', '업체별 운영 시간 상이', '프로모 공지글로 이동 (lineup 서비스 내)', 0, 0, '2025-09-11 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 4, 'Stop', '인자셔틀 정류장', '정류장 한줄소개', '정류장 설명', 80, 260, '2025-09-11 09:00:00', '2025-09-11 18:30:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-(null, 7, 'Store', '총학생회 굿즈샵', '11:00 ~ 20:00', NULL, 0, 0, '2025-09-11 11:00:00', '2025-09-12 20:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 7, 'Booth', '티셔츠 배부', '1일차 12:00~ 2일차 10:00~ ', NULL, 0, 0, '2025-09-11 12:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 7, 'Booth', '프리오더 현장 배부', '11:00 ~ 18:00', NULL, 0, 0, '2025-09-11 11:00:00', '2025-09-12 18:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 8, 'Booth', '취식존', '10:00 ~ 22:00', NULL, 0, 0, '2025-09-11 10:00:00', '2025-09-12 22:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 8, 'Store', '푸드트럭', '11:00 ~ 23:00', NULL, 0, 0, '2025-09-11 11:00:00', '2025-09-12 23:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 9, 'Booth', '화장실', '상시 이용 가능', NULL, 0, 0, '2025-09-11 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 10, 'Store', '셀프 촬영 부스', '상시 이용 가능', NULL, 0, 0, '2025-09-11 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
-(null, 10, 'Booth', '총학생회 촬영 부스', '11:00 ~ 18:00', NULL, 0, 0, '2025-09-11 11:00:00', '2025-09-12 18:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00');
+insert into booth (area_id, category_id, dtype, name, summary, description, x, y, open, close, type, created_at, modified_at) VALUES
+--day1
+(null, 1, 'Booth', '메인 스테이지', '10:00 ~ 상시 입장', NULL, 337, 515, '2025-09-11 10:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 8, 'Booth', '취식존', '10:00 ~ 22:00', NULL, 241, 625, '2025-09-11 10:00:00', '2025-09-11 22:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 8, 'Store', '푸드트럭', '11:00 ~ 23:00', NULL, 133, 615, '2025-09-11 11:00:00', '2025-09-11 23:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 8, 'Store', '푸드트럭', '11:00 ~ 23:00', NULL, 142, 704, '2025-09-11 11:00:00', '2025-09-11 23:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 8, 'Booth', '배달존', '10:00 ~ 22:00', NULL, 130, 482, '2025-09-11 10:00:00', '2025-09-11 22:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 2, 'Booth', '프로모션', '업체별 운영 시간 상이', '-', 192, 554, '2025-09-11 00:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 2, 'Booth', '프로모션', '업체별 운영 시간 상이', '-', 382, 631, '2025-09-11 00:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 7, 'Booth', '티셔츠 배부', '1일차 11:00 ~, 2일차 10:00 ~ 소진시 마감', NULL, 254, 633, '2025-09-11 12:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 7, 'Booth', '프리오더 현장 배부', '11:00 ~ 18:00', NULL, 274, 633, '2025-09-11 11:00:00', '2025-09-11 18:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 10, 'Booth', '총학생회 포토 이벤트 부스', '11:00 ~ 18:00', NULL, 294, 633, '2025-09-11 11:00:00', '2025-09-11 18:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 7, 'Store', '총학생회 굿즈샵', '11:00 ~ 20:00', NULL, 314, 633, '2025-09-11 11:00:00', '2025-09-11 20:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 9, 'Booth', '화장실', '상시 이용 가능', '생명공학관, 학군단, 복지회관 화장실 개방', 225, 495, '2025-09-11 00:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 9, 'Booth', '화장실', '상시 이용 가능', '생명공학관, 학군단, 복지회관 화장실 개방', 447, 669, '2025-09-11 00:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 9, 'Booth', '화장실', '상시 이용 가능', '생명공학관, 학군단, 복지회관 화장실 개방', 578, 818, '2025-09-11 00:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 9, 'Booth', '화장실', '상시 이용 가능', '생명공학관, 학군단, 복지회관 화장실 개방', 190, 918, '2025-09-11 00:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 10, 'Store', '셀프 촬영 부스', '상시 이용 가능', NULL, 470, 935, '2025-09-11 00:00:00', '2025-09-11 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 4, 'Stop', '인자셔틀 정류장', '23:00부터 탑승 위치가 N센터 앞에서 수성관 앞으로 변동', '-', 650, 905, '2025-09-11 09:00:00', '2025-09-11 18:30:00', null, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+-- day2, 45~
+(null, 1, 'Booth', '메인 스테이지', '10:00 ~ 상시 입장', NULL, 337, 515, '2025-09-12 10:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 8, 'Booth', '취식존', '10:00 ~ 22:00', NULL, 241, 625, '2025-09-12 10:00:00', '2025-09-12 22:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 8, 'Store', '푸드트럭', '11:00 ~ 23:00', NULL, 133, 615, '2025-09-12 11:00:00', '2025-09-12 23:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 8, 'Store', '푸드트럭', '11:00 ~ 23:00', NULL, 142, 704, '2025-09-12 11:00:00', '2025-09-12 23:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 8, 'Booth', '배달존', '10:00 ~ 22:00', NULL, 130, 482, '2025-09-12 10:00:00', '2025-09-12 22:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 2, 'Booth', '프로모션', '업체별 운영 시간 상이', '-', 192, 554, '2025-09-12 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 2, 'Booth', '프로모션', '업체별 운영 시간 상이', '-', 382, 631, '2025-09-12 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 7, 'Booth', '티셔츠 배부', '1일차 11:00 ~, 2일차 10:00 ~ 소진시 마감', NULL, 254, 633, '2025-09-12 10:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 7, 'Booth', '프리오더 현장 배부', '11:00 ~ 18:00', NULL, 274, 633, '2025-09-12 11:00:00', '2025-09-12 18:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 10, 'Booth', '총학생회 포토 이벤트 부스', '11:00 ~ 18:00', NULL, 294, 633, '2025-09-12 11:00:00', '2025-09-12 18:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 7, 'Store', '총학생회 굿즈샵', '11:00 ~ 20:00', NULL, 314, 633, '2025-09-12 11:00:00', '2025-09-12 20:00:00', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 9, 'Booth', '화장실', '상시 이용 가능', '생명공학관, 학군단, 복지회관 화장실 개방', 225, 495, '2025-09-12 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 9, 'Booth', '화장실', '상시 이용 가능', '생명공학관, 학군단, 복지회관 화장실 개방', 447, 669, '2025-09-12 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 9, 'Booth', '화장실', '상시 이용 가능', '생명공학관, 학군단, 복지회관 화장실 개방', 578, 818, '2025-09-12 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 9, 'Booth', '화장실', '상시 이용 가능', '생명공학관, 학군단, 복지회관 화장실 개방', 190, 918, '2025-09-12 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 10, 'Store', '셀프 촬영 부스', '상시 이용 가능', NULL, 470, 935, '2025-09-12 00:00:00', '2025-09-12 23:59:59', NULL, '2025-09-10 00:00:00', '2025-09-10 00:00:00'),
+(null, 4, 'Stop', '인자셔틀 정류장', '22:30부터 탑승 위치가 N센터 앞에서 수성관 앞으로 변동', '-', 650, 905, '2025-09-12 09:00:00', '2025-09-12 18:30:00', null, '2025-09-10 00:00:00', '2025-09-10 00:00:00');
+
+insert into menu (store_id, image, name, price, created_at, modified_at) values
+-- goods
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '📣 응원 슬로건', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🎨 타투 스티커', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🧣 반다나', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '⛓️ 카라비너', 6000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🎒 스트링백', 13000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🎖️ 뱃지 3종', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '⚾ 야구 유니폼', 38000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🏒 하키 유니폼', 40000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(38, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🏉 럭비 유니폼', 40000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '📣 응원 슬로건', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🎨 타투 스티커', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🧣 반다나', 7000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '⛓️ 카라비너', 6000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🎒 스트링백', 13000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🎖️ 뱃지 3종', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '⚾ 야구 유니폼', 38000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🏒 하키 유니폼', 40000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(55, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', '🏉 럭비 유니폼', 40000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+-- photo
+(43, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', 'Half cut', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(43, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', 'Full cut', 5000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(60, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', 'Half cut', 4000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+(60, 'https://d3v6v16qfe5bon.cloudfront.net/icons/placeholder.jpg', 'Full cut', 5000, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+
+insert into booth_link (booth_id, label, href) values
+-- t-shirt
+(35, '자세히보기', 'https://skkuscatchhssc.notion.site/25d8b91a086b804d97a8e0c57332ff7f'),
+(52, '자세히보기', 'https://skkuscatchhssc.notion.site/25d8b91a086b804d97a8e0c57332ff7f'),
+-- photo
+(37, '자세히보기', 'https://skkuscatchhssc.notion.site/25b8b91a086b80f8ac74d6386fd4e7a1'),
+(54, '자세히보기', 'https://skkuscatchhssc.notion.site/25b8b91a086b80f8ac74d6386fd4e7a1'),
+-- bus
+(44, '자세히보기', 'https://skkuscatchhssc.notion.site/25b8b91a086b80f8ac74d6386fd4e7a1'),
+(61, '자세히보기', 'https://skkuscatchhssc.notion.site/25b8b91a086b80f8ac74d6386fd4e7a1'),
+-- food truck
+(30, '자세히보기', 'https://skkuscatchhssc.notion.site/F-B-25d8b91a086b804381dbff39f2a95222'),
+(31, '자세히보기', 'https://skkuscatchhssc.notion.site/F-B-25d8b91a086b804381dbff39f2a95222'),
+(47, '자세히보기', 'https://skkuscatchhssc.notion.site/F-B-25d8b91a086b804381dbff39f2a95222'),
+(48, '자세히보기', 'https://skkuscatchhssc.notion.site/F-B-25d8b91a086b804381dbff39f2a95222'),
+-- promo
+(33, '자세히보기', 'https://skkuscatchhssc.notion.site/25d8b91a086b80b58a85fa3b60607a98'),
+(34, '자세히보기', 'https://skkuscatchhssc.notion.site/25d8b91a086b80b58a85fa3b60607a98'),
+(50, '자세히보기', 'https://skkuscatchhssc.notion.site/25d8b91a086b80b58a85fa3b60607a98'),
+(51, '자세히보기', 'https://skkuscatchhssc.notion.site/25d8b91a086b80b58a85fa3b60607a98');
+
+-- stop_time
+insert into stop_time (stop_id, time) values
+(30, '07:00:00'),
+(30, '10:30:00'),
+(30, '12:00:00'),
+(30, '13:30:00'),
+(30, '15:00:00'),
+(30, '16:30:00'),
+(30, '18:15:00'),
+(30, '23:00:00'),
+(30, '23:00:00'),
+(30, '23:10:00'),
+(30, '23:10:00'),
+(30, '23:20:00'),
+(30, '23:20:00'),
+(30, '23:30:00'),
+(30, '23:30:00');
 
 -- post
 insert into post (title, content, created_at, modified_at) values
@@ -395,10 +509,125 @@ insert into post (title, content, created_at, modified_at) values
 ('포토부스 이벤트 안내', '안녕하세요, 성균관대학교 제57대 총학생회 S:CATCH입니다.\n\n2025 ESKARA 포토부스 이벤트 안내드립니다.\n\n부스 운영 시간\n양일 11:00 - 18:00\n\n부스 운영 장소\n대운동장 구령대 옆 포토슛캐치 부스\n\n포토부스 이벤트 참여 방법\n1. 구령대 옆 포토슛캐치 부스를 방문합니다.\n2. 원하는 카메라를 선택합니다. (폴라로이드 or 디카)\n3. 부스 앞 초록의 파도 포토존에서 다양한 소품과 함께 사진을 촬영합니다.\n4. 보정 여부를 선택합니다.\n5. 오직 2025 ESKARA: 초록의 파도에서만 찍을 수 있는 사진 득템!\n\n@skku_eskara 계정 태그 이벤트\n당첨자 13명 선정\n에어팟 4세대 1명\n5만원 상당의 스탠리 텀블러 2명\n배달의 민족 2만원 상품권 10명', '2025-09-10 10:00:00', '2025-09-10 10:00:00'),
 ('종합 안내', '불어오는 바람을 따라 더욱 거세게 일렁일, 2025 ESKARA: 초록의 파도가 드디어 하루 앞으로 다가왔습니다! 학우 여러분께서 보다 편리하게 정보를 확인하실 수 있도록 종합 안내 자보를 업로드하니 많은 관심과 참여 부탁드립니다.', '2025-09-10 10:00:00', '2025-09-10 10:00:00');
 
--- post_image TODO
+-- post_image
 insert into post_image (post_id, src) values
-(1, 'https://example.com/post/event_schedule.jpg'),
-(2, 'https://example.com/post/shuttle_change.jpg');
+(1, 'https://example.com/post/1_1.png'),
+(1, 'https://example.com/post/1_2.png'),
+(1, 'https://example.com/post/1_3.png'),
+(1, 'https://example.com/post/1_4.png'),
+(1, 'https://example.com/post/1_5.png'),
+(2, 'https://example.com/post/2_1.png'),
+(2, 'https://example.com/post/2_2.png'),
+(2, 'https://example.com/post/2_3.png'),
+(2, 'https://example.com/post/2_4.png'),
+(2, 'https://example.com/post/2_5.png'),
+(2, 'https://example.com/post/2_6.png'),
+(2, 'https://example.com/post/2_7.png'),
+(2, 'https://example.com/post/2_8.png'),
+(2, 'https://example.com/post/2_9.png'),
+(2, 'https://example.com/post/2_10.png'),
+(2, 'https://example.com/post/2_11.png'),
+(2, 'https://example.com/post/2_12.png'),
+(3, 'https://example.com/post/3_1.png'),
+(3, 'https://example.com/post/3_2.png'),
+(3, 'https://example.com/post/3_3.png'),
+(3, 'https://example.com/post/3_4.png'),
+(4, 'https://example.com/post/4_1.png'),
+(4, 'https://example.com/post/4_2.png'),
+(4, 'https://example.com/post/4_3.png'),
+(4, 'https://example.com/post/4_4.png'),
+(4, 'https://example.com/post/4_5.png'),
+(4, 'https://example.com/post/4_6.png'),
+(4, 'https://example.com/post/4_7.png'),
+(4, 'https://example.com/post/4_8.png'),
+(4, 'https://example.com/post/4_9.png'),
+(4, 'https://example.com/post/4_10.png'),
+(4, 'https://example.com/post/4_11.png'),
+(4, 'https://example.com/post/4_12.png'),
+(4, 'https://example.com/post/4_13.png'),
+(4, 'https://example.com/post/4_14.png'),
+(5, 'https://example.com/post/5_1.png'),
+(5, 'https://example.com/post/5_2.png'),
+(5, 'https://example.com/post/5_3.png'),
+(5, 'https://example.com/post/5_4.png'),
+(5, 'https://example.com/post/5_5.png'),
+(5, 'https://example.com/post/5_6.png'),
+(6, 'https://example.com/post/6_1.png'),
+(6, 'https://example.com/post/6_2.png'),
+(6, 'https://example.com/post/6_3.png'),
+(6, 'https://example.com/post/6_4.png'),
+(6, 'https://example.com/post/6_5.png'),
+(6, 'https://example.com/post/6_6.png'),
+(6, 'https://example.com/post/6_7.png'),
+(7, 'https://example.com/post/7_1.png'),
+(7, 'https://example.com/post/7_2.png'),
+(7, 'https://example.com/post/7_3.png'),
+(7, 'https://example.com/post/7_4.png'),
+(7, 'https://example.com/post/7_5.png'),
+(7, 'https://example.com/post/7_6.png'),
+(7, 'https://example.com/post/7_7.png'),
+(7, 'https://example.com/post/7_8.png'),
+(7, 'https://example.com/post/7_9.png'),
+(8, 'https://example.com/post/8_1.png'),
+(8, 'https://example.com/post/8_2.png'),
+(8, 'https://example.com/post/8_3.png'),
+(8, 'https://example.com/post/8_4.png'),
+(8, 'https://example.com/post/8_5.png'),
+(8, 'https://example.com/post/8_6.png'),
+(8, 'https://example.com/post/8_7.png'),
+(8, 'https://example.com/post/8_8.png'),
+(8, 'https://example.com/post/8_9.png'),
+(9, 'https://example.com/post/9_1.png'),
+(9, 'https://example.com/post/9_2.png'),
+(9, 'https://example.com/post/9_3.png'),
+(9, 'https://example.com/post/9_4.png'),
+(9, 'https://example.com/post/9_5.png'),
+(9, 'https://example.com/post/9_6.png'),
+(9, 'https://example.com/post/9_7.png'),
+(9, 'https://example.com/post/9_8.png'),
+(9, 'https://example.com/post/9_9.png'),
+(9, 'https://example.com/post/9_10.png'),
+(9, 'https://example.com/post/9_11.png'),
+(9, 'https://example.com/post/9_12.png'),
+(9, 'https://example.com/post/9_13.png'),
+(9, 'https://example.com/post/9_14.png'),
+(10, 'https://example.com/post/10_1.png'),
+(10, 'https://example.com/post/10_2.png'),
+(10, 'https://example.com/post/10_3.png'),
+(10, 'https://example.com/post/10_4.png'),
+(10, 'https://example.com/post/10_5.png'),
+(10, 'https://example.com/post/10_6.png'),
+(10, 'https://example.com/post/10_7.png'),
+(10, 'https://example.com/post/10_8.png'),
+(10, 'https://example.com/post/10_9.png'),
+(10, 'https://example.com/post/10_10.png'),
+(10, 'https://example.com/post/10_11.png'),
+(11, 'https://example.com/post/11_1.png'),
+(11, 'https://example.com/post/11_2.png'),
+(11, 'https://example.com/post/11_3.png'),
+(11, 'https://example.com/post/11_4.png'),
+(11, 'https://example.com/post/11_5.png'),
+(11, 'https://example.com/post/11_6.png'),
+(11, 'https://example.com/post/11_7.png'),
+(12, 'https://example.com/post/12_1.png'),
+(12, 'https://example.com/post/12_2.png'),
+(12, 'https://example.com/post/12_3.png'),
+(12, 'https://example.com/post/12_4.png'),
+(12, 'https://example.com/post/12_5.png'),
+(13, 'https://example.com/post/13_1.png'),
+(13, 'https://example.com/post/13_2.png'),
+(13, 'https://example.com/post/13_3.png'),
+(13, 'https://example.com/post/13_4.png'),
+(14, 'https://example.com/post/14_1.png'),
+(14, 'https://example.com/post/14_2.png'),
+(14, 'https://example.com/post/14_3.png'),
+(14, 'https://example.com/post/14_4.png'),
+(14, 'https://example.com/post/14_5.png'),
+(14, 'https://example.com/post/14_6.png'),
+(14, 'https://example.com/post/14_7.png'),
+(14, 'https://example.com/post/14_8.png'),
+(14, 'https://example.com/post/14_9.png'),
+(14, 'https://example.com/post/14_10.png');
 
 -- post_link
 insert into post_link (post_id, label, href) values
@@ -417,12 +646,8 @@ insert into post_link (post_id, label, href) values
 (13, '포토부스 이벤트', 'https://student.skku.edu/student/notice3.do?mode=view&articleNo=58306&article.offset=0&articleLimit=9'),
 (14, '종합 안내', 'https://www.instagram.com/p/DOavpxVEirx/?utm_source=ig_web_copy_link&igsh=YWh0aGV4ZHdlNXhk');
 
--- stop_time TODO
-insert into stop_time (stop_id, time) values
-(2, '08:00:00'),
-(2, '09:00:00');
 
--- timeslot TODO href
+-- timeslot
 insert into timeslot (name, start_time, end_time, href, created_at, modified_at) values
 -- day1
 ('지성전 예선 및 본선', '2025-09-11 12:00:00', '2025-09-11 13:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
@@ -438,7 +663,7 @@ insert into timeslot (name, start_time, end_time, href, created_at, modified_at)
 ('화려한 혈통', '2025-09-11 20:00:00', '2025-09-11 20:30:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
 ('B.E.S.T.', '2025-09-11 20:30:00', '2025-09-11 21:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
 ('화록청', '2025-09-11 21:00:00', '2025-09-11 21:30:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
-('아티스트', '2025-09-11 21:30:00', '2025-09-11 23:00:00', 'https://example.com/session/afternoon', '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
+('아티스트', '2025-09-11 21:30:00', '2025-09-11 23:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
 -- day2
 ('GRVN(그루븐)', '2025-09-11 14:00:00', '2025-09-11 14:30:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
 ('솔카프', '2025-09-11 14:30:00', '2025-09-11 15:00:00', null, '2025-09-11 00:00:00', '2025-09-11 00:00:00'),
