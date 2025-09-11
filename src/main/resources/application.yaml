@@ -1,3 +1,6 @@
+server:
+  port: 3000
+
 spring:
   application:
     name: skku
@@ -5,21 +8,12 @@ spring:
   profiles:
     default: local
 
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:db
-
-  sql:
-    init:
-      mode: always
-
   jpa:
     open-in-view: false
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-    defer-datasource-initialization: true
 
 logging:
   level:
