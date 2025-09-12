@@ -25,7 +25,7 @@ class Stop (
     @JoinTable(name = "stop_time",
         joinColumns = [JoinColumn(name = "stop_id")])
     @Column(name = "time")
-    private val times: MutableList<LocalTime> = mutableListOf()
+    val times: MutableList<LocalTime> = mutableListOf()
 
 ) : Booth(id, area, category, name, summary, description, point, hour, images, links) {
 

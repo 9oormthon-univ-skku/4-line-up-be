@@ -9,6 +9,7 @@ import com.lineup.skku.common.Link
 import com.lineup.skku.common.Point
 import jakarta.persistence.CascadeType
 import jakarta.persistence.Entity
+import jakarta.persistence.FetchType
 import jakarta.persistence.OneToMany
 
 @Entity
@@ -23,8 +24,8 @@ class Store (
     hour: Hour,
     images: MutableList<String> = mutableListOf(),
     links: MutableList<Link> = mutableListOf(),
-    @OneToMany(mappedBy = "store", cascade = [CascadeType.ALL], orphanRemoval = true)
-    private val menus: MutableList<Menu> = mutableListOf()
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "store", cascade = [CascadeType.ALL], orphanRemoval = true)
+    val menus: MutableList<Menu> = mutableListOf()
 ) : Booth(id, area, category, name, summary, description, point, hour, images, links) {
     fun update(dto: StoreUpdateDto) {
         name = dto.name ?: name
