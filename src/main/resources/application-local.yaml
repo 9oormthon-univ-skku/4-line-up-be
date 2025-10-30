@@ -6,4 +6,6 @@ spring:
     password: ${DATABASE_PASSWORD}
 
   jpa:
+    hibernate:
+      ddl-auto: create
     defer-datasource-initialization: true

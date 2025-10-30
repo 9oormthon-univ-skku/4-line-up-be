@@ -16,7 +16,6 @@ import org.springframework.web.servlet.NoHandlerFoundException
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
 import java.io.PrintWriter
 import java.io.StringWriter
-import java.util.Map
 
 @RestControllerAdvice
 class ExceptionHandler : ResponseEntityExceptionHandler() {
@@ -62,8 +61,10 @@ class ExceptionHandler : ResponseEntityExceptionHandler() {
         request: WebRequest
     ): ResponseEntity<Any> {
         return ResponseEntity.status(CommonExceptionCode.NOT_VALID.status)
-            .body(Map.of<String, Any>("code", CommonExceptionCode.NOT_VALID.code,
-                "message", ex.bindingResult.fieldErrors.joinToString(", ") { "${it.field}: ${it.defaultMessage.orEmpty()}" }))
+            .body(mapOf<String, Any>(
+                "code" to CommonExceptionCode.NOT_VALID.code,
+                "message" to ex.bindingResult.fieldErrors.joinToString(", ") { "${it.field}: ${it.defaultMessage.orEmpty()}" }
+            ))
     }
 
     override fun handleHandlerMethodValidationException(
