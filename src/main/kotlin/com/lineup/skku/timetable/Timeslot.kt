@@ -7,8 +7,6 @@ import java.time.LocalDateTime
 
 @Entity
 class Timeslot (
-    id: Long = 0L,
-
     @Column(nullable = false)
     var name: String,
 
@@ -20,4 +18,4 @@ class Timeslot (
 
     var href: String?
 
-) : BaseEntity(id)
+) : BaseEntity()

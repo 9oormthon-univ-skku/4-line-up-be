@@ -8,5 +8,6 @@ enum class CategoryExceptionCode (
     override val status: HttpStatus,
     override val message: String
 ) : ExceptionCode {
-    DELETE_CATEGORY_WITH_BOOTH("A001", HttpStatus.BAD_REQUEST, "부스가 존재하는 카테고리는 삭제할 수 없습니다.")
+    NOT_FOUND("C001", HttpStatus.BAD_REQUEST, "요청하신 카테고리를 찾을 수 없습니다."),
+    DELETE_CATEGORY_WITH_BOOTH("C002", HttpStatus.BAD_REQUEST, "부스가 존재하는 카테고리는 삭제할 수 없습니다.")
 }

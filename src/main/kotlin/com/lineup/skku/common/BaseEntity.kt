@@ -1,24 +1,39 @@
 package com.lineup.skku.common
 
 import jakarta.persistence.*
+import org.hibernate.annotations.CreationTimestamp
+import org.hibernate.annotations.UpdateTimestamp
 import java.time.LocalDateTime
 
 @MappedSuperclass
-abstract class BaseEntity (
+abstract class BaseEntity() {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0L
-) {
-    @Column(nullable = false)
-    val createdAt: LocalDateTime = LocalDateTime.now()
+    val id: Long = 0
 
-    @Column(nullable = false)
-    var modifiedAt: LocalDateTime = LocalDateTime.now()
-        protected set
+    @Enumerated(EnumType.STRING)
+    private var status: EntityStatus = EntityStatus.ACTIVE
 
-    @PreUpdate
-    fun preUpdate() {
-        modifiedAt = LocalDateTime.now()
+    @CreationTimestamp
+    val createdAt: LocalDateTime = LocalDateTime.MIN
+
+    @UpdateTimestamp
+    val updatedAt: LocalDateTime = LocalDateTime.MIN
+
+    fun active() {
+        status = EntityStatus.ACTIVE
+    }
+
+    fun isActive(): Boolean {
+        return status == EntityStatus.ACTIVE
+    }
+
+    fun delete() {
+        status = EntityStatus.DELETED
+    }
+
+    fun isDeleted(): Boolean {
+        return status == EntityStatus.DELETED
     }
 
     override fun equals(other: Any?): Boolean {

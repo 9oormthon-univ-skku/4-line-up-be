@@ -12,10 +12,10 @@ class CategoryController (
 ) {
 
     @PostMapping
-    fun create(@Valid @RequestBody dto: CategoryCreateDto): ResponseEntity<Long> {
-        val saved = service.create(dto)
-        return ResponseEntity.created("/categories/${saved.id}".toUri())
-            .body(saved.id)
+    fun create(@Valid @RequestBody request: CategoryCreateRequest): ResponseEntity<Long> {
+        val result = service.create(request)
+        return ResponseEntity.created("/categories/${result.id}".toUri())
+            .body(result.id)
     }
 
     @GetMapping
@@ -27,9 +27,9 @@ class CategoryController (
     @PatchMapping("/{id}")
     fun update(
         @PathVariable id: Long,
-        @RequestBody dto: CategoryUpdateDto
+        @RequestBody request: CategoryUpdateRequest
     ): ResponseEntity<Void> {
-        service.update(id, dto)
+        service.update(id, request)
         return ResponseEntity.ok().build()
     }
 

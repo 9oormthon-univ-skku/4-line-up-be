@@ -12,14 +12,14 @@ class PostController (
 ) {
 
     @PostMapping
-    fun create(@Valid @RequestBody dto: PostCreateDto): ResponseEntity<Long> {
-        val saved = service.create(dto)
-        return ResponseEntity.created("/posts/${saved.id}".toUri())
-            .body(saved.id)
+    fun create(@Valid @RequestBody request: PostCreateRequest): ResponseEntity<Long> {
+        val result = service.create(request)
+        return ResponseEntity.created("/posts/${result.id}".toUri())
+            .body(result.id)
     }
 
     @GetMapping
-    fun findAll(): ResponseEntity<List<Post>> {
+    fun findAll(): ResponseEntity<List<PostSummary>> {
         val result = service.findAll()
         return ResponseEntity.ok(result)
     }
@@ -27,9 +27,9 @@ class PostController (
     @PatchMapping("/{id}")
     fun update(
         @PathVariable id: Long,
-        @RequestBody dto: PostUpdateDto
+        @RequestBody request: PostUpdateRequest
     ): ResponseEntity<Void> {
-        service.update(id, dto)
+        service.update(id, request)
         return ResponseEntity.ok().build()
     }
 
