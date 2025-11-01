@@ -6,8 +6,6 @@ import jakarta.persistence.Entity
 
 @Entity
 class Category (
-    id: Long = 0L,
-
     @Column(nullable = false)
     var name: String,
 
@@ -16,7 +14,7 @@ class Category (
 
     @Column(nullable = false)
     var color: String,
-) : BaseEntity(id) {
+) : BaseEntity() {
     fun update(dto: CategoryUpdateDto) {
         name = dto.name ?: name
         icon = dto.icon ?: icon

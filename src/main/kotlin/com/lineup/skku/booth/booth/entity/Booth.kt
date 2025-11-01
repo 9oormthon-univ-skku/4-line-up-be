@@ -25,29 +25,14 @@ import jakarta.persistence.*
     JsonSubTypes.Type(value = Store::class, name = "store")
 ])
 class Booth (
-    id: Long = 0L,
-
-    @ManyToOne
-    @JoinColumn(name = "area_id")
-    var area: Area?,
-
+    var areaId: Long?,
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     var category: Category,
-
-    @Column(nullable = false)
     var name: String,
-
-    @Column
     var summary: String?,
-
-    @Column(nullable = false)
     var description: String,
-
-    @Column(nullable = false)
     var point: Point,
-
-    @Column(nullable = false)
     var hour: Hour,
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -61,7 +46,7 @@ class Booth (
         joinColumns = [JoinColumn(name = "booth_id")])
     val links: MutableList<Link> = mutableListOf()
 
-) : BaseEntity(id) {
+) : BaseEntity() {
 
     fun update(dto: BoothUpdateDto) {
         name = dto.name ?: name

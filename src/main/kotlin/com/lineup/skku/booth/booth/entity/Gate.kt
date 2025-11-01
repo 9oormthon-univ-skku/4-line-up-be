@@ -27,7 +27,7 @@ class Gate (
     @Enumerated(EnumType.STRING)
     var type: GateType,
 
-) : Booth(id, area, category, name, summary, description, point, hour, images, links) {
+) : Booth(area?.id, category, name, summary, description, point, hour, images, links) {
 
     fun update(dto: GateUpdateDto) {
         name = dto.name ?: name

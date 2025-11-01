@@ -1,4 +1,4 @@
-package com.lineup.skku.common.aop
+package com.lineup.skku.common.redis
 
 import org.redisson.Redisson
 import org.redisson.api.RedissonClient
@@ -24,7 +24,7 @@ class RedissonConfig (
         val config = Config()
         config.useSingleServer().address = "$REDISSON_HOST_PREFIX$redisHost:$redisPort"
 
-        val redisson = Redisson.create(config)
+        val redisson = Redisson.create(config)  
         return redisson
     }
 

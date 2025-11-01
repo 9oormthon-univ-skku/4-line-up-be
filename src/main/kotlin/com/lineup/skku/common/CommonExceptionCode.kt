@@ -13,5 +13,6 @@ enum class CommonExceptionCode(
     FORBIDDEN ("C004", HttpStatus.FORBIDDEN,"리소스 접근 권한이 없습니다."),
     NOT_FOUND ("C005", HttpStatus.NOT_FOUND,"요청하신 경로를 찾을 수 없습니다."),
     UNSUPPORTED_MEDIA_TYPE ("C006", HttpStatus.UNSUPPORTED_MEDIA_TYPE,"지원하지 않는 미디어 형식입니다."),
-    INTERNAL_SERVER_ERROR ("C007", HttpStatus.INTERNAL_SERVER_ERROR,"서버 내부 오류입니다.");
+    INTERNAL_SERVER_ERROR ("C007", HttpStatus.INTERNAL_SERVER_ERROR,"서버 내부 오류입니다."),
+    REDIS_LOCK_FAILURE("C008", HttpStatus.INTERNAL_SERVER_ERROR, "Redis Lock 획득에 실패했습니다.");
 }

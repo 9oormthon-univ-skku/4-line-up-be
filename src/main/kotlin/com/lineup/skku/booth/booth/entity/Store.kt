@@ -26,7 +26,7 @@ class Store (
     links: MutableList<Link> = mutableListOf(),
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "store", cascade = [CascadeType.ALL], orphanRemoval = true)
     val menus: MutableList<Menu> = mutableListOf()
-) : Booth(id, area, category, name, summary, description, point, hour, images, links) {
+) : Booth(area?.id, category, name, summary, description, point, hour, images, links) {
     fun update(dto: StoreUpdateDto) {
         name = dto.name ?: name
         summary = dto.summary ?: summary

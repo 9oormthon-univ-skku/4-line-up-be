@@ -8,7 +8,6 @@ class MenuConverter {
 
     fun toEntity(store: Store, dto: MenuCreateDto): Menu {
         return Menu(
-            0L,
             store,
             dto.image,
             dto.name,

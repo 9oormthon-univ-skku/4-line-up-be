@@ -8,40 +8,40 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/areas")
 @RestController
 class AreaController (
-    private val service: AreaService,
+    private val areaService: AreaService,
 ) {
 
     @PostMapping
-    fun create(@Valid @RequestBody dto: AreaCreateDto): ResponseEntity<Long> {
-        val saved = service.create(dto)
-        return ResponseEntity.created("/areas/${saved.id}".toUri())
-            .body(saved.id)
+    fun create(@Valid @RequestBody request: AreaCreateRequest): ResponseEntity<Long> {
+        val area = areaService.create(request)
+        return ResponseEntity.created("/areas/${area.id}".toUri())
+            .body(area.id)
     }
 
     @GetMapping
     fun findAll(): ResponseEntity<List<Area>> {
-        val result = service.findAll()
+        val result = areaService.findAll()
         return ResponseEntity.ok(result)
     }
 
     @GetMapping("/{id}")
     fun findById(@PathVariable id: Long): ResponseEntity<Area> {
-        val result = service.findById(id)
+        val result = areaService.findById(id)
         return ResponseEntity.ok(result)
     }
 
     @PatchMapping("/{id}")
     fun update(
         @PathVariable id: Long,
-        @RequestBody dto: AreaUpdateDto
+        @RequestBody request: AreaUpdateRequest
     ): ResponseEntity<Void> {
-        service.update(id, dto)
+        areaService.update(id, request)
         return ResponseEntity.ok().build()
     }
 
     @DeleteMapping("/{id}")
     fun delete(@PathVariable id: Long): ResponseEntity<Void> {
-        service.delete(id)
+        areaService.delete(id)
         return ResponseEntity.ok().build()
     }
 }

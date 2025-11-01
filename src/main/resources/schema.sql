@@ -1,30 +1,34 @@
-drop table if exists category cascade;
-drop table if exists area cascade;
-drop table if exists area_image cascade;
-drop table if exists area_link cascade;
-drop table if exists booth cascade;
-drop table if exists booth_image cascade;
-drop table if exists booth_link cascade;
-drop table if exists menu cascade;
-drop table if exists post cascade;
-drop table if exists post_image cascade;
-drop table if exists post_link cascade;
 drop table if exists stop_time cascade;
+drop table if exists menu cascade;
+drop table if exists booth_link cascade;
+drop table if exists booth_image cascade;
+drop table if exists booth cascade;
+
+drop table if exists area_link cascade;
+drop table if exists area_image cascade;
+drop table if exists area cascade;
+
+drop table if exists category cascade;
+
+drop table if exists post_link cascade;
+drop table if exists post_image cascade;
+drop table if exists post cascade;
+
 drop table if exists timeslot cascade;
 
-create table category (id bigint AUTO_INCREMENT, name varchar(255) not null, icon varchar(255) not null, color varchar(255) not null, created_at timestamp(6) not null, modified_at timestamp(6) not null, primary key (id));
-create table area (id bigint AUTO_INCREMENT, name varchar(255) not null, summary varchar(255), description text not null, x integer, y integer, open timestamp(6), close timestamp(6), created_at timestamp(6) not null, modified_at timestamp(6) not null, primary key (id));
-create table area_image (area_id bigint not null, src varchar(255));
-create table area_link (area_id bigint not null, label varchar(255), href varchar(255));
-create table booth (id bigint AUTO_INCREMENT, area_id bigint, category_id bigint not null, dtype varchar(31) not null, name varchar(255) not null, summary varchar(255), description text not null, x integer, y integer, open timestamp(6), close timestamp(6), type enum ('ALL','ENTRY','EXIT'), created_at timestamp(6) not null, modified_at timestamp(6) not null, primary key (id));
-create table booth_image (booth_id bigint not null, src varchar(255));
-create table booth_link (booth_id bigint not null, label varchar(255), href varchar(255));
-create table menu (id bigint AUTO_INCREMENT, store_id bigint not null, image varchar(255) not null, name varchar(255) not null, price bigint not null, created_at timestamp(6) not null, modified_at timestamp(6) not null, primary key (id));
-create table post (id bigint AUTO_INCREMENT, title varchar(255) not null, content text not null, created_at timestamp(6) not null, modified_at timestamp(6) not null, primary key (id));
-create table post_image (post_id bigint not null, src varchar(255));
-create table post_link (post_id bigint not null, label varchar(255), href varchar(255));
-create table stop_time (stop_id bigint not null, time time(6));
-create table timeslot (id bigint AUTO_INCREMENT, name varchar(255) not null, start_time timestamp(6) not null, end_time timestamp(6) not null, href varchar(255), created_at timestamp(6) not null, modified_at timestamp(6) not null, primary key (id));
+create table category (id bigint AUTO_INCREMENT, name varchar(255) not null, icon varchar(255) not null, color varchar(255) not null, status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table area (id bigint AUTO_INCREMENT, name varchar(255) not null, summary varchar(255), description text not null, x integer, y integer, open timestamp(6), close timestamp(6), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table area_image (id bigint AUTO_INCREMENT, area_id bigint not null, src varchar(255), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table area_link (id bigint AUTO_INCREMENT, area_id bigint not null, label varchar(255), href varchar(255), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table booth (id bigint AUTO_INCREMENT, area_id bigint, category_id bigint not null, dtype varchar(31) not null, name varchar(255) not null, summary varchar(255), description text not null, x integer, y integer, open timestamp(6), close timestamp(6), type enum ('ALL','ENTRY','EXIT'), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table booth_image (id bigint AUTO_INCREMENT, booth_id bigint not null, src varchar(255), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table booth_link (id bigint AUTO_INCREMENT, booth_id bigint not null, label varchar(255), href varchar(255), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table menu (id bigint AUTO_INCREMENT, store_id bigint not null, image varchar(255) not null, name varchar(255) not null, price bigint not null, status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table post (id bigint AUTO_INCREMENT, title varchar(255) not null, content text not null, status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table post_image (id bigint AUTO_INCREMENT, post_id bigint not null, src varchar(255), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table post_link (id bigint AUTO_INCREMENT, post_id bigint not null, label varchar(255), href varchar(255), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table stop_time (id bigint AUTO_INCREMENT, stop_id bigint not null, time time(6), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
+create table timeslot (id bigint AUTO_INCREMENT, name varchar(255) not null, start_time timestamp(6) not null, end_time timestamp(6) not null, href varchar(255), status enum('ACTIVE', 'DELETED') not null, created_at timestamp(6) not null, updated_at timestamp(6) not null, primary key (id));
 
 alter table area_image add constraint FKh5t1438yoh9qdbrp5rhup1e2r foreign key (area_id) references area(id);
 alter table area_link add constraint FKkpk95weftxx5ninyauarxq6er foreign key (area_id) references area(id);

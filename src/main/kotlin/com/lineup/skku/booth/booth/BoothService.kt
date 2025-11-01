@@ -44,7 +44,7 @@ class BoothService (
     }
 
     fun updateArea(booth: Booth, area: Area?) {
-        booth.area = area
+        booth.areaId = area?.id
         repository.save(booth)
     }
 }

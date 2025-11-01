@@ -7,8 +7,6 @@ import jakarta.persistence.*
 
 @Entity
 class Menu (
-    id: Long = 0L,
-
     @ManyToOne
     @JoinColumn(name = "store_id", nullable = false)
     @JsonIgnore
@@ -22,7 +20,7 @@ class Menu (
 
     @Column(nullable = false)
     var price: Long
-) : BaseEntity(id) {
+) : BaseEntity() {
 
     fun update(dto: MenuUpdateDto) {
         image = dto.image ?: image

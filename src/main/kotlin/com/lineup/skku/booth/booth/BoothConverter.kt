@@ -17,8 +17,7 @@ class BoothConverter {
         if(dto is StoreCreateDto) return toEntity(area, category, dto)
 
         return Booth(
-            0L,
-            area,
+            area?.id,
             category,
             dto.name,
             dto.summary,

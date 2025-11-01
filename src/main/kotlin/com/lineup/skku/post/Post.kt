@@ -6,8 +6,6 @@ import jakarta.persistence.*
 
 @Entity
 class Post (
-    id: Long = 0L,
-
     @Column(nullable = false)
     var title: String,
 
@@ -24,7 +22,7 @@ class Post (
     @JoinTable(name = "post_link",
         joinColumns = [JoinColumn(name = "post_id")])
     val links: MutableList<Link> = mutableListOf()
-) : BaseEntity(id) {
+) : BaseEntity() {
 
     fun update(dto: PostUpdateDto) {
         title = dto.title ?: title
