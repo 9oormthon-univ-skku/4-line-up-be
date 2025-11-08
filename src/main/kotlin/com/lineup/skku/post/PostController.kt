@@ -24,6 +24,12 @@ class PostController (
         return ResponseEntity.ok(result)
     }
 
+    @GetMapping("/{id}")
+    fun findById(@PathVariable id: Long): ResponseEntity<Post> {
+        val result = service.findById(id)
+        return ResponseEntity.ok(result)
+    }
+
     @PatchMapping("/{id}")
     fun update(
         @PathVariable id: Long,
