@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Configuration
  */
 @Configuration
 class RedissonConfig (
-    @Value("\${spring.data.redis.host}")
-    private val redisHost: String,
+    @Value("\${spring.data.redis.url}")
+    private val redisUrl: String,
     @Value("\${spring.data.redis.port}")
     private val redisPort: Int
 ) {
@@ -22,13 +22,9 @@ class RedissonConfig (
     @Bean
     fun redissonClient(): RedissonClient {
         val config = Config()
-        config.useSingleServer().address = "$REDISSON_HOST_PREFIX$redisHost:$redisPort"
+        config.useSingleServer().address = "$redisUrl:$redisPort"
 
         val redisson = Redisson.create(config)  
         return redisson
-    }
-
-    companion object {
-        private const val REDISSON_HOST_PREFIX = "redis://"
     }
 }
